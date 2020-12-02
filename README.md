@@ -4,6 +4,12 @@
 
 > My AdventOfCode solutions
 
+## 🚀 Usage
+
+```sh
+node --experimental-modules code.js
+```
+
 ## Author
 
 👤 **Maximilian Stadtmüller**
