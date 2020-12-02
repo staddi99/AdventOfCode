@@ -1,0 +1,9 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "My AdventOfCode solutions",
+  "keywords": [],
+  "author": "Maximilian Stadtmüller <maximilian.stadtmueller@staddi99.com> (https://staddi99.com)",
+  "license": "ISC",
+  "type": "module"
+}
