@@ -14,15 +14,27 @@ function compute(noun, verb) {
       array[array[i + 3]] = parseInt(array[array[i + 1]]) * parseInt(array[array[i + 2]]);
     }
   }
-  return array[0].toString();
+  return array[0];
 }
 
 function partOne() {
-  return compute(12,2);
+  return compute(12, 2);
 }
 
 function partTwo() {
-  return compute(80,18);
+  let nums = Array(100)
+    .fill(0)
+    .map((c, i) => i);
+
+  for (let noun of nums) {
+    for (let verb of nums) {
+      let position_zero = compute(noun, verb);
+
+      if (position_zero === 19690720) {
+        return 100 * noun + verb;
+      }
+    }
+  }
 }
 
 console.log("Part 1: " + partOne());
