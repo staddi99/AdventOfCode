@@ -2,8 +2,20 @@
   "name": "adventofcode",
   "version": "1.0.0",
   "description": "My AdventOfCode solutions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staddi99/AdventOfCode.git"
+  },
   "keywords": [],
   "author": "Maximilian Stadtmüller <maximilian.stadtmueller@staddi99.com> (https://staddi99.com)",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/staddi99/AdventOfCode/issues"
+  },
+  "homepage": "https://github.com/staddi99/AdventOfCode#readme",
+  "dependencies": {
+    "string.prototype.matchall": "^4.0.3",
+    "uniq": "^1.0.1"
+  }
 }
