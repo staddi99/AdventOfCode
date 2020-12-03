@@ -25,9 +25,9 @@ node --experimental-modules code.js
 
 Completed: **3 / 25** (12%⭐️)
 
-*  [✅ Day 1](2020/day\ 1/)
-*  [✅ Day 2](2020/day\ 2/)
-*  [✅ Day 3](2020/day\ 3/)
+*  [✅ Day 1](2020/day_1/)
+*  [✅ Day 2](2020/day_2/)
+*  [✅ Day 3](2020/day_3/)
 *  Day 4
 *  Day 5
 *  Day 6
@@ -55,10 +55,10 @@ Completed: **3 / 25** (12%⭐️)
 
 Completed: **4 / 25** (16%⭐️)
 
-*  [✅ Day 1](2019/day\ 1/)
-*  [✅ Day 2](2019/day\ 2/)
-*  [✅ Day 3](2019/day\ 3/)
-*  [✅ Day 4](2019/day\ 4/)
+*  [✅ Day 1](2019/day_1/)
+*  [✅ Day 2](2019/day_2/)
+*  [✅ Day 3](2019/day_3/)
+*  [✅ Day 4](2019/day_4/)
 *  Day 5
 *  Day 6
 *  Day 7
