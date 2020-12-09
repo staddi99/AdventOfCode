@@ -23,7 +23,7 @@ node --experimental-modules code.js
 
 ### 2020 Puzzles List
 
-Completed: **8 / 25** (32%⭐️)
+Completed: **9 / 25** (36%⭐️)
 
 *  [✅ Day 1](2020/day_1/)
 *  [✅ Day 2](2020/day_2/)
@@ -33,7 +33,7 @@ Completed: **8 / 25** (32%⭐️)
 *  [✅ Day 6](2020/day_6/)
 *  [✅ Day 7](2020/day_7/)
 *  [✅ Day 8](2020/day_8/)
-*  Day 9
+*  [✅ Day 9](2020/day_9/)
 *  Day 10
 *  Day 11
 *  Day 12
