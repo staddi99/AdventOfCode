@@ -1,5 +1,6 @@
 # Welcome to AdventOfCode 👋
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
+[![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion.json)](https://github.com/staddi99/AdventOfCode)
+[![License: Unlicense](https://img.shields.io/github/license/staddi99/AdventOfCode)](LICENSE)
 [![Twitter: Staddi99](https://img.shields.io/twitter/follow/Staddi99.svg?style=social)](https://twitter.com/Staddi99)
 
 > My AdventOfCode solutions
