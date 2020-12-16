@@ -15,7 +15,9 @@
   "homepage": "https://github.com/staddi99/AdventOfCode#readme",
   "dependencies": {
     "axios": "^0.21.0",
+    "breakdance": "^3.0.1",
     "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.2.0",
     "string.prototype.matchall": "^4.0.3",
     "uniq": "^1.0.1"
   },
