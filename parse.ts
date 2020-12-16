@@ -1,29 +1,43 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const year = 2020;
+const args = process.argv.slice(2);
 
-const getPostTitles = async () => {
-  const postTitles = [];
-  for (let i = 1; i <= 25; i++) {
-    try {
-      const { status, data } = await axios.get(
-        'https://adventofcode.com/' + year + '/day/' + i
-      );
+let year = (args[0]) ? args[0] : 2020;
+let day = (args[1]) ? args[1] : 0;
 
-      if (status === 404) {
-        continue;
-      }
+const getTitle = async (year, day) => {
+  let postTitle;
+  try {
+    const { status, data } = await axios.get(
+      'https://adventofcode.com/' + year + '/day/' + day
+    );
 
-      const $ = cheerio.load(data);
+    if (status === 404) {
+      return;
+    }
 
-      $('body > main > article > h2').each((_idx, el) => {
-        const postTitle = $(el).text().split(': ')[1].split(' -')[0];
-        postTitles.push('*  [❌ Day ' + i + ': ' + postTitle + ']()');
-      });
-    } catch (error) {}
+    const $ = cheerio.load(data);
+
+    $('body > main > article > h2').each((_idx, el) => {
+      postTitle = $(el).text().split(': ')[1].split(' -')[0];
+    });
+  } catch (error) {
+    return;
   }
-  return postTitles;
+  return '*  [❌ Day ' + day + ': ' + postTitle + ']()';
 };
 
-getPostTitles().then((postTitles) => postTitles.forEach((e) => console.log(e)));
+const getTitles = async () => {
+  const titles = [];
+  if (day != 0 && day != null) {
+    await getTitle(year, day).then(title => {if(title != null) titles.push(title)});
+  } else {
+    for (let i = 1; i <= 25; i++) {
+      await getTitle(year, i).then(title => {if(title != null) titles.push(title)});
+    }
+  }
+  return titles;
+};
+
+getTitles().then((postTitles) => postTitles.forEach((e) => console.log(e)));
