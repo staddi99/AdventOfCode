@@ -147,7 +147,7 @@ z=2
 .......
 ```
 
-After the full six-cycle boot process completes, _ `112`_ cubes are left in the _active_ state.
+After the full six-cycle boot process completes, _`112`_ cubes are left in the _active_ state.
 
 Starting with your given initial configuration, simulate six cycles. _How many cubes are left in the active state after the sixth cycle?_
 
