@@ -13,5 +13,8 @@
     "url": "https://github.com/staddi99/AdventOfCode/issues"
   },
   "homepage": "https://github.com/staddi99/AdventOfCode/tree/main/2020#readme",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "string-math": "^1.2.2"
+  }
 }
