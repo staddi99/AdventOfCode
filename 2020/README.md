@@ -31,7 +31,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 16: Ticket Translation](day_16/)
 *  [✅ Day 17: Conway Cubes](day_17/)
 *  [✅ Day 18: Operation Order](day_18/)
-*  [❔ Day 19: TBD]()
+*  [✅ Day 19: Monster Messages](day_19/)
 *  [❔ Day 20: TBD]()
 *  [❔ Day 21: TBD]()
 *  [❔ Day 22: TBD]()
