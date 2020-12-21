@@ -33,7 +33,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 18: Operation Order](day_18/)
 *  [✅ Day 19: Monster Messages](day_19/)
 *  [✅ Day 20: Jurassic Jigsaw](day_20/)
-*  [❔ Day 21: TBD]()
+*  [✅ Day 21: Allergen Assessment](day_21/)
 *  [❔ Day 22: TBD]()
 *  [❔ Day 23: TBD]()
 *  [❔ Day 24: TBD]()
