@@ -35,7 +35,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 20: Jurassic Jigsaw](day_20/)
 *  [✅ Day 21: Allergen Assessment](day_21/)
 *  [✅ Day 22: Crab Combat](day_22/)
-*  [❔ Day 23: TBD]()
+*  [✅ Day 23: Crab Cups](day_23/)
 *  [❔ Day 24: TBD]()
 *  [❔ Day 25: TBD]()
 
