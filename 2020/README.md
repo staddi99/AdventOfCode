@@ -36,7 +36,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 21: Allergen Assessment](day_21/)
 *  [✅ Day 22: Crab Combat](day_22/)
 *  [✅ Day 23: Crab Cups](day_23/)
-*  [❔ Day 24: TBD]()
+*  [✅ Day 24: Lobby Layout](day_24/)
 *  [❔ Day 25: TBD]()
 
 ## Previous Years
