@@ -37,7 +37,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 22: Crab Combat](day_22/)
 *  [✅ Day 23: Crab Cups](day_23/)
 *  [✅ Day 24: Lobby Layout](day_24/)
-*  [❔ Day 25: TBD]()
+*  [✅ Day 25: Combo Breaker](day_25/)
 
 ## Previous Years
 *  [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2019.json&label=2019)](https://github.com/staddi99/AdventOfCode/tree/main/2019)
