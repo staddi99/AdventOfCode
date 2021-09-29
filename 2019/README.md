@@ -14,7 +14,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 3: Crossed Wires](day_3/)
 *  [✅ Day 4: Secure Container](day_4/)
 *  [✅ Day 5: Sunny with a Chance of Asteroids](day_5/)
-*  [❌ Day 6: Universal Orbit Map]()
+*  [✅ Day 6: Universal Orbit Map](day_6/)
 *  [❌ Day 7: Amplification Circuit]()
 *  [❌ Day 8: Space Image Format]()
 *  [❌ Day 9: Sensor Boost]()
