@@ -16,7 +16,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 5: Sunny with a Chance of Asteroids](day_5/)
 *  [✅ Day 6: Universal Orbit Map](day_6/)
 *  [✅ Day 7: Amplification Circuit](day_7/)
-*  [❌ Day 8: Space Image Format]()
+*  [✅ Day 8: Space Image Format](day_8/)
 *  [❌ Day 9: Sensor Boost]()
 *  [❌ Day 10: Monitoring Station]()
 *  [❌ Day 11: Space Police]()
