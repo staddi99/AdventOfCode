@@ -31,7 +31,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [❌ Day 20: Donut Maze]()
 *  [❌ Day 21: Springdroid Adventure]()
 *  [❌ Day 22: Slam Shuffle]()
-*  [❌ Day 23: Category Six]()
+*  [✅ Day 23: Category Six](day_23/)
 *  [❌ Day 24: Planet of Discord]()
 *  [❌ Day 25: Cryostasis]()
 
