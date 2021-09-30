@@ -17,7 +17,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 6: Universal Orbit Map](day_6/)
 *  [✅ Day 7: Amplification Circuit](day_7/)
 *  [✅ Day 8: Space Image Format](day_8/)
-*  [❌ Day 9: Sensor Boost]()
+*  [✅ Day 9: Sensor Boost](day_9/)
 *  [❌ Day 10: Monitoring Station]()
 *  [❌ Day 11: Space Police]()
 *  [❌ Day 12: The N-Body Problem]()
