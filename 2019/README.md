@@ -22,7 +22,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 11: Space Police](day_11/)
 *  [✅ Day 12: The N-Body Problem](day_12/)
 *  [✅ Day 13: Care Package](day_13/)
-*  [❌ Day 14: Space Stoichiometry]()
+*  [✅ Day 14: Space Stoichiometry](day_14/)
 *  [❌ Day 15: Oxygen System]()
 *  [❌ Day 16: Flawed Frequency Transmission]()
 *  [❌ Day 17: Set and Forget]()
