@@ -27,7 +27,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 16: Flawed Frequency Transmission](day_16/)
 *  [❌ Day 17: Set and Forget]()
 *  [✅ Day 18: Many-Worlds Interpretation](day_18/)
-*  [❌ Day 19: Tractor Beam]()
+*  [✅ Day 19: Tractor Beam](day_19/)
 *  [❌ Day 20: Donut Maze]()
 *  [❌ Day 21: Springdroid Adventure]()
 *  [❌ Day 22: Slam Shuffle]()
