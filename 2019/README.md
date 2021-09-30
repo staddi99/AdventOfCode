@@ -25,7 +25,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 14: Space Stoichiometry](day_14/)
 *  [✅ Day 15: Oxygen System](day_15/)
 *  [✅ Day 16: Flawed Frequency Transmission](day_16/)
-*  [❌ Day 17: Set and Forget]()
+*  [✅ Day 17: Set and Forget](day_17/)
 *  [✅ Day 18: Many-Worlds Interpretation](day_18/)
 *  [✅ Day 19: Tractor Beam](day_19/)
 *  [❌ Day 20: Donut Maze]()
