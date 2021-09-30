@@ -24,7 +24,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 13: Care Package](day_13/)
 *  [✅ Day 14: Space Stoichiometry](day_14/)
 *  [❌ Day 15: Oxygen System]()
-*  [❌ Day 16: Flawed Frequency Transmission]()
+*  [✅ Day 16: Flawed Frequency Transmission](day_16/)
 *  [❌ Day 17: Set and Forget]()
 *  [❌ Day 18: Many-Worlds Interpretation]()
 *  [❌ Day 19: Tractor Beam]()
