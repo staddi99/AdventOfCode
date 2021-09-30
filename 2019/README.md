@@ -19,7 +19,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 8: Space Image Format](day_8/)
 *  [✅ Day 9: Sensor Boost](day_9/)
 *  [✅ Day 10: Monitoring Station](day_10/)
-*  [❌ Day 11: Space Police]()
+*  [✅ Day 11: Space Police](day_11/)
 *  [❌ Day 12: The N-Body Problem]()
 *  [❌ Day 13: Care Package]()
 *  [❌ Day 14: Space Stoichiometry]()
