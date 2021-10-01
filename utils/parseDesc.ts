@@ -38,7 +38,18 @@ const getDescription = async (year, day) => {
 
 const getDescriptions = async () => {
   const descs = [];
-  if (day != 0 && day != null) {
+  if (part == 0) {
+    await getDescription(year, 1).then((desc) => {
+      if (desc != null) {
+        descs.push([
+          [
+            desc[0].toString().split('---\n\n')[1].split('Good luck!\n')[0] +
+              'Good luck!\n',
+          ],
+        ]);
+      }
+    });
+  } else if (day != 0 && day != null) {
     await getDescription(year, day).then((desc) => {
       if (desc != null) descs.push(desc);
     });
@@ -49,11 +60,13 @@ const getDescriptions = async () => {
       });
     }
   }
+  console.log(descs);
   return descs;
 };
 
 getDescriptions().then((postDescs) =>
   postDescs.forEach((e) => {
+    part = part == 0 ? 1 : part;
     if (e[part - 1] != undefined) e[part - 1].forEach((l) => console.log(l));
   })
 );
