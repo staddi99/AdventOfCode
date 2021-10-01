@@ -33,7 +33,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 22: Slam Shuffle](day_22/)
 *  [✅ Day 23: Category Six](day_23/)
 *  [✅ Day 24: Planet of Discord](day_24/)
-*  [❌ Day 25: Cryostasis]()
+*  [✅ Day 25: Cryostasis](day_25/)
 
 ## Previous Years
 *  [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2018.json&label=2018)](https://github.com/staddi99/AdventOfCode/tree/main/2018)
