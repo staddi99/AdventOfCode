@@ -28,7 +28,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 17: Set and Forget](day_17/)
 *  [✅ Day 18: Many-Worlds Interpretation](day_18/)
 *  [✅ Day 19: Tractor Beam](day_19/)
-*  [❌ Day 20: Donut Maze]()
+*  [✅ Day 20: Donut Maze](day_20/)
 *  [❌ Day 21: Springdroid Adventure]()
 *  [✅ Day 22: Slam Shuffle](day_22/)
 *  [✅ Day 23: Category Six](day_23/)
