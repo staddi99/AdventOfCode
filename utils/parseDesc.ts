@@ -60,7 +60,7 @@ const getDescriptions = async () => {
       });
     }
   }
-  console.log(descs);
+  // console.log(descs);
   return descs;
 };
 
