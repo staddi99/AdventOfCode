@@ -1,6 +1,7 @@
 # Advent of Code 2021 - My Solutions
 [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2021.json)](https://github.com/staddi99/AdventOfCode/tree/main/2021)
-[![Dependency Status](https://img.shields.io/david/staddi99/AdventOfCode.svg)](https://david-dm.org/staddi99/AdventOfCode)
+[![dependencies Status](https://status.david-dm.org/gh/staddi99/AdventOfCode.svg)](https://david-dm.org/staddi99/AdventOfCode)
+[![devDependencies Status](https://status.david-dm.org/gh/staddi99/AdventOfCode.svg?type=dev)](https://david-dm.org/staddi99/AdventOfCode?type=dev)
 [![License: Unlicense](https://img.shields.io/github/license/staddi99/AdventOfCode)](https://raw.githubusercontent.com/staddi99/AdventOfCode/master/LICENSE)
 
 You're minding your own business on a ship at sea when the overboard alarm goes off! You rush to see if you can help. Apparently, one of the Elves tripped and accidentally sent the sleigh keys flying into the ocean!

@@ -1,6 +1,7 @@
 # Advent of Code __YEAR__ - My Solutions
 [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-__YEAR__.json)](https://github.com/staddi99/AdventOfCode/tree/main/__YEAR__)
-[![Dependency Status](https://img.shields.io/david/staddi99/AdventOfCode.svg)](https://david-dm.org/staddi99/AdventOfCode)
+[![dependencies Status](https://status.david-dm.org/gh/staddi99/AdventOfCode.svg)](https://david-dm.org/staddi99/AdventOfCode)
+[![devDependencies Status](https://status.david-dm.org/gh/staddi99/AdventOfCode.svg?type=dev)](https://david-dm.org/staddi99/AdventOfCode?type=dev)
 [![License: Unlicense](https://img.shields.io/github/license/staddi99/AdventOfCode)](https://raw.githubusercontent.com/staddi99/AdventOfCode/master/LICENSE)
 
 __YEAR_DESCRIPTION__

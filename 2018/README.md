@@ -1,6 +1,7 @@
 # Advent of Code 2018 - My Solutions
 [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2018.json)](https://github.com/staddi99/AdventOfCode/tree/main/2018)
-[![Dependency Status](https://img.shields.io/david/staddi99/AdventOfCode.svg)](https://david-dm.org/staddi99/AdventOfCode)
+[![dependencies Status](https://status.david-dm.org/gh/staddi99/AdventOfCode.svg)](https://david-dm.org/staddi99/AdventOfCode)
+[![devDependencies Status](https://status.david-dm.org/gh/staddi99/AdventOfCode.svg?type=dev)](https://david-dm.org/staddi99/AdventOfCode?type=dev)
 [![License: Unlicense](https://img.shields.io/github/license/staddi99/AdventOfCode)](https://raw.githubusercontent.com/staddi99/AdventOfCode/master/LICENSE)
 
 "We've detected some temporal anomalies," one of Santa's Elves at the Temporal Anomaly Research and Detection Instrument Station tells you. She sounded pretty worried when she called you down here. "At 500-year intervals into the past, someone has been changing Santa's history!"

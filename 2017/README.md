@@ -1,6 +1,7 @@
 # Advent of Code 2017 - My Solutions
 [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2017.json)](https://github.com/staddi99/AdventOfCode/tree/main/2017)
-[![Dependency Status](https://img.shields.io/david/staddi99/AdventOfCode.svg)](https://david-dm.org/staddi99/AdventOfCode)
+[![dependencies Status](https://status.david-dm.org/gh/staddi99/AdventOfCode.svg)](https://david-dm.org/staddi99/AdventOfCode)
+[![devDependencies Status](https://status.david-dm.org/gh/staddi99/AdventOfCode.svg?type=dev)](https://david-dm.org/staddi99/AdventOfCode?type=dev)
 [![License: Unlicense](https://img.shields.io/github/license/staddi99/AdventOfCode)](https://raw.githubusercontent.com/staddi99/AdventOfCode/master/LICENSE)
 
 The night before Christmas, one of Santa's Elves calls you in a panic. "The printer's broken! We can't print the _Naughty or Nice List_!" By the time you make it to sub-basement 17, there are only a few minutes until midnight. "We have a big problem," she says; "there must be almost _fifty_ bugs in this system, but nothing else can print The List. Stand in this square, quick! There's no time to explain; if you can convince them to pay you in **stars**, you'll be able to--" She pulls a lever and the world goes blurry.
