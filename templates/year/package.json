@@ -1,0 +1,17 @@
+{
+  "name": "adventofcode-__YEAR__",
+  "version": "1.0.0",
+  "description": "My AdventOfCode __YEAR__ solutions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staddi99/AdventOfCode.git"
+  },
+  "keywords": [],
+  "author": "Maximilian Stadtmüller <maximilian.stadtmueller@staddi99.com> (https://staddi99.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/staddi99/AdventOfCode/issues"
+  },
+  "homepage": "https://github.com/staddi99/AdventOfCode/tree/main/__YEAR__#readme",
+  "type": "module"
+}

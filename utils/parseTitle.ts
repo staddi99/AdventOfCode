@@ -3,9 +3,9 @@ const cheerio = require('cheerio');
 
 const args = process.argv.slice(2);
 
-let year = (args[0]) ? args[0] : 2020;
-let day = (args[1]) ? args[1] : 1;
-let only = (args[2]) ? args[2] : 0;
+let year = args[0] ? args[0] : 2020;
+let day = args[1] ? args[1] : 1;
+let only = args[2] ? args[2] : 0;
 
 const getTitle = async (year, day) => {
   let postTitle;
@@ -33,10 +33,18 @@ const getTitle = async (year, day) => {
 const getTitles = async () => {
   const titles = [];
   if (day != 0 && day != null) {
-    await getTitle(year, day).then(title => {if(title != null) titles.push(title)});
+    await getTitle(year, day).then((title) => {
+      if (title != null) titles.push(title);
+    });
   } else {
     for (let i = 1; i <= 25; i++) {
-      await getTitle(year, i).then(title => {if(title != null) titles.push(title)});
+      await getTitle(year, i).then((title) => {
+        if (title != null) {
+          titles.push(title);
+        } else {
+          titles.push('*  [❔ Day ' + i + ': TBD]()');
+        }
+      });
     }
   }
   return titles;

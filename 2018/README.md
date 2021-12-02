@@ -13,7 +13,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 
 ## Days
 
-*  [❌ Day 1: Chronal Calibration]()
+*  [✅ Day 1: Chronal Calibration](day_1/)
 *  [❌ Day 2: Inventory Management System]()
 *  [❌ Day 3: No Matter How You Slice It]()
 *  [❌ Day 4: Repose Record]()

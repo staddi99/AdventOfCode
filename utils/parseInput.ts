@@ -15,8 +15,7 @@ const getInput = async (year, day) => {
       'https://adventofcode.com/' + year + '/day/' + day + '/input',
       {
         headers: {
-          Cookie:
-            'session='+process.env.AOD_SESSION_COOKIE+';',
+          Cookie: 'session=' + process.env.AOD_SESSION_COOKIE + ';',
         },
       }
     );
@@ -47,4 +46,4 @@ const getInputs = async () => {
   return inputs;
 };
 
-getInputs().then((postInput) => postInput.forEach(e => console.log(e)));
+getInputs().then((postInput) => postInput.forEach((e) => console.log(e)));
