@@ -14,7 +14,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 ## Days
 
 *  [✅ Day 1: Sonar Sweep](day_1/)
-*  [❔ Day 2: TBD]()
+*  [✅ Day 2: Dive!](day_2/)
 *  [❔ Day 3: TBD]()
 *  [❔ Day 4: TBD]()
 *  [❔ Day 5: TBD]()
