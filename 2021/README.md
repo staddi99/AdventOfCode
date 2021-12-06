@@ -17,7 +17,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 1: Sonar Sweep](day_1/)
 *  [✅ Day 2: Dive!](day_2/)
 *  [✅ Day 3: Binary Diagnostic](day_3/)
-*  [❔ Day 4: TBD]()
+*  [✅ Day 4: Giant Squid](day_4/)
 *  [❔ Day 5: TBD]()
 *  [❔ Day 6: TBD]()
 *  [❔ Day 7: TBD]()
