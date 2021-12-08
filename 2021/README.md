@@ -21,7 +21,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 5: Hydrothermal Venture](day_5/)
 *  [✅ Day 6: Lanternfish](day_6/)
 *  [✅ Day 7: The Treachery of Whales](day_7/)
-*  [❔ Day 8: TBD]()
+*  [✅ Day 8: Seven Segment Search](day_8/)
 *  [❔ Day 9: TBD]()
 *  [❔ Day 10: TBD]()
 *  [❔ Day 11: TBD]()
