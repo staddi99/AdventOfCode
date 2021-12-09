@@ -18,7 +18,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 2: Inventory Management System](day_2/)
 *  [✅ Day 3: No Matter How You Slice It](day_3/)
 *  [✅ Day 4: Repose Record](day_4/)
-*  [❌ Day 5: Alchemical Reduction]()
+*  [✅ Day 5: Alchemical Reduction](day_5/)
 *  [❌ Day 6: Chronal Coordinates]()
 *  [❌ Day 7: The Sum of Its Parts]()
 *  [❌ Day 8: Memory Maneuver]()
