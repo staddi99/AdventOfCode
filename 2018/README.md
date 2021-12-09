@@ -16,7 +16,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 
 *  [✅ Day 1: Chronal Calibration](day_1/)
 *  [✅ Day 2: Inventory Management System](day_2/)
-*  [❌ Day 3: No Matter How You Slice It]()
+*  [✅ Day 3: No Matter How You Slice It](day_3/)
 *  [❌ Day 4: Repose Record]()
 *  [❌ Day 5: Alchemical Reduction]()
 *  [❌ Day 6: Chronal Coordinates]()
