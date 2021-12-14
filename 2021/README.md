@@ -26,7 +26,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 10: Syntax Scoring](day_10/)
 *  [✅ Day 11: Dumbo Octopus](day_11/)
 *  [✅ Day 12: Passage Pathing](day_12/)
-*  [❔ Day 13: TBD]()
+*  [✅ Day 13: Transparent Origami](day_13/)
 *  [❔ Day 14: TBD]()
 *  [❔ Day 15: TBD]()
 *  [❔ Day 16: TBD]()
