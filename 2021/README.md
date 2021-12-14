@@ -27,7 +27,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 11: Dumbo Octopus](day_11/)
 *  [✅ Day 12: Passage Pathing](day_12/)
 *  [✅ Day 13: Transparent Origami](day_13/)
-*  [❔ Day 14: TBD]()
+*  [✅ Day 14: Extended Polymerization](day_14/)
 *  [❔ Day 15: TBD]()
 *  [❔ Day 16: TBD]()
 *  [❔ Day 17: TBD]()
