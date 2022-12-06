@@ -1,0 +1,51 @@
+# Advent of Code 2022 - My Solutions
+[![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2022.json)](https://github.com/staddi99/AdventOfCode/tree/main/2022)
+[![dependencies Status](https://status.david-dm.org/gh/staddi99/AdventOfCode.svg)](https://david-dm.org/staddi99/AdventOfCode)
+[![devDependencies Status](https://status.david-dm.org/gh/staddi99/AdventOfCode.svg?type=dev)](https://david-dm.org/staddi99/AdventOfCode?type=dev)
+[![License: Unlicense](https://img.shields.io/github/license/staddi99/AdventOfCode)](https://raw.githubusercontent.com/staddi99/AdventOfCode/master/LICENSE)
+
+Santa's reindeer typically eat regular reindeer food, but they need a lot of [magical energy](/2018/day/25) to deliver presents on Christmas. For that, their favorite snack is a special type of _star_ fruit that only grows deep in the jungle. The Elves have brought you on their annual expedition to the grove where the fruit grows.
+
+To supply enough magical energy, the expedition needs to retrieve a minimum of _fifty stars_ by December 25th. Although the Elves assure you that the grove has plenty of fruit, you decide to grab any fruit you see along the way, just in case.
+
+Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants _one star_. Good luck!
+
+## Days
+
+*  [✅ Day 1: Calorie Counting](day_1/)
+*  [✅ Day 2: Rock Paper Scissors](day_2/)
+*  [❌ Day 3: Rucksack Reorganization]()
+*  [❌ Day 4: Camp Cleanup]()
+*  [❌ Day 5: Supply Stacks]()
+*  [❌ Day 6: Tuning Trouble]()
+*  [❔ Day 7: TBD]()
+*  [❔ Day 8: TBD]()
+*  [❔ Day 9: TBD]()
+*  [❔ Day 10: TBD]()
+*  [❔ Day 11: TBD]()
+*  [❔ Day 12: TBD]()
+*  [❔ Day 13: TBD]()
+*  [❔ Day 14: TBD]()
+*  [❔ Day 15: TBD]()
+*  [❔ Day 16: TBD]()
+*  [❔ Day 17: TBD]()
+*  [❔ Day 18: TBD]()
+*  [❔ Day 19: TBD]()
+*  [❔ Day 20: TBD]()
+*  [❔ Day 21: TBD]()
+*  [❔ Day 22: TBD]()
+*  [❔ Day 23: TBD]()
+*  [❔ Day 24: TBD]()
+*  [❔ Day 25: TBD]()
+
+## Previous Years
+*  [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2021.json&label=2021)](https://github.com/staddi99/AdventOfCode/tree/main/2021)
+*  [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2020.json&label=2020)](https://github.com/staddi99/AdventOfCode/tree/main/2020)
+*  [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2019.json&label=2019)](https://github.com/staddi99/AdventOfCode/tree/main/2019)
+*  [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2018.json&label=2018)](https://github.com/staddi99/AdventOfCode/tree/main/2018)
+*  [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2017.json&label=2017)](https://github.com/staddi99/AdventOfCode/tree/main/2017)
+*  [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2016.json&label=2016)](https://github.com/staddi99/AdventOfCode/tree/main/2016)
+*  [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2015.json&label=2015)](https://github.com/staddi99/AdventOfCode/tree/main/2015)
+
+## Visit
+*  http://adventofcode.com/2022
