@@ -17,7 +17,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 3: Rucksack Reorganization](day_3/)
 *  [✅ Day 4: Camp Cleanup](day_4/)
 *  [✅ Day 5: Supply Stacks](day_5/)
-*  [❌ Day 6: Tuning Trouble]()
+*  [✅ Day 6: Tuning Trouble](day_6/)
 *  [❔ Day 7: TBD]()
 *  [❔ Day 8: TBD]()
 *  [❔ Day 9: TBD]()
