@@ -31,7 +31,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 15: Chiton](day_15/)
 *  [✅ Day 16: Packet Decoder](day_16/)
 *  [✅ Day 17: Trick Shot](day_17/)
-*  [❔ Day 18: TBD]()
+*  [✅ Day 18: Snailfish](day_18/)
 *  [❔ Day 19: TBD]()
 *  [❔ Day 20: TBD]()
 *  [❔ Day 21: TBD]()
