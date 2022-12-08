@@ -34,7 +34,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 18: Snailfish](day_18/)
 *  [✅ Day 19: Beacon Scanner](day_19/)
 *  [✅ Day 20: Trench Map](day_20/)
-*  [❔ Day 21: TBD]()
+*  [✅ Day 21: Dirac Dice](day_21/)
 *  [❔ Day 22: TBD]()
 *  [❔ Day 23: TBD]()
 *  [❔ Day 24: TBD]()
