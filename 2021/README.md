@@ -28,7 +28,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 12: Passage Pathing](day_12/)
 *  [✅ Day 13: Transparent Origami](day_13/)
 *  [✅ Day 14: Extended Polymerization](day_14/)
-*  [❔ Day 15: TBD]()
+*  [✅ Day 15: Chiton](day_15/)
 *  [❔ Day 16: TBD]()
 *  [❔ Day 17: TBD]()
 *  [❔ Day 18: TBD]()
