@@ -38,7 +38,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 22: Reactor Reboot](day_22/)
 *  [❔ Day 23: TBD]()
 *  [✅ Day 24: Arithmetic Logic Unit](day_24/)
-*  [❔ Day 25: TBD]()
+*  [🛠️ Day 25: Sea Cucumber](day_25/)
 
 ## Previous Years
 *  [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2020.json&label=2020)](https://github.com/staddi99/AdventOfCode/tree/main/2020)
