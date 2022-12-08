@@ -32,7 +32,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 16: Packet Decoder](day_16/)
 *  [✅ Day 17: Trick Shot](day_17/)
 *  [✅ Day 18: Snailfish](day_18/)
-*  [❔ Day 19: TBD]()
+*  [✅ Day 19: Beacon Scanner](day_19/)
 *  [❔ Day 20: TBD]()
 *  [❔ Day 21: TBD]()
 *  [❔ Day 22: TBD]()
