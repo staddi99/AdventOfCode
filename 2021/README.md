@@ -29,7 +29,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 13: Transparent Origami](day_13/)
 *  [✅ Day 14: Extended Polymerization](day_14/)
 *  [✅ Day 15: Chiton](day_15/)
-*  [❔ Day 16: TBD]()
+*  [✅ Day 16: Packet Decoder](day_16/)
 *  [❔ Day 17: TBD]()
 *  [❔ Day 18: TBD]()
 *  [❔ Day 19: TBD]()
