@@ -33,7 +33,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 17: Trick Shot](day_17/)
 *  [✅ Day 18: Snailfish](day_18/)
 *  [✅ Day 19: Beacon Scanner](day_19/)
-*  [❔ Day 20: TBD]()
+*  [✅ Day 20: Trench Map](day_20/)
 *  [❔ Day 21: TBD]()
 *  [❔ Day 22: TBD]()
 *  [❔ Day 23: TBD]()
