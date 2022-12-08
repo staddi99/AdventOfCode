@@ -37,7 +37,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 21: Dirac Dice](day_21/)
 *  [✅ Day 22: Reactor Reboot](day_22/)
 *  [❔ Day 23: TBD]()
-*  [❔ Day 24: TBD]()
+*  [✅ Day 24: Arithmetic Logic Unit](day_24/)
 *  [❔ Day 25: TBD]()
 
 ## Previous Years
