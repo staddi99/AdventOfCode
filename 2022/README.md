@@ -19,7 +19,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 5: Supply Stacks](day_5/)
 *  [✅ Day 6: Tuning Trouble](day_6/)
 *  [✅ Day 7: No Space Left On Device](day_7/)
-*  [❔ Day 8: TBD]()
+*  [✅ Day 8: Treetop Tree House](day_8/)
 *  [❔ Day 9: TBD]()
 *  [❔ Day 10: TBD]()
 *  [❔ Day 11: TBD]()
