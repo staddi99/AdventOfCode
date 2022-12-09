@@ -2,6 +2,9 @@
   "name": "adventofcode",
   "version": "1.0.0",
   "description": "My AdventOfCode solutions",
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/staddi99/AdventOfCode.git"
@@ -28,6 +31,11 @@
     "uniq": "^1.0.1"
   },
   "devDependencies": {
-    "@types/node": "^16.11.11"
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^16.11.11",
+    "babel-jest": "^29.3.1",
+    "jest": "^29.3.1"
   }
 }
