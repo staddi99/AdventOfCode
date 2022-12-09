@@ -11,13 +11,13 @@ const seqOfUniqueChar = (input, length) => {
   }
 };
 
-export function partOne(test) {
-  const data = test ? inputArrayTest : inputArray;
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   return seqOfUniqueChar(data, 4);
 }
 
-export function partTwo(test) {
-  const data = test ? inputArrayTest : inputArray;
+export function partTwo(usTest) {
+  const data = usTest ? inputArrayTest : inputArray;
   return seqOfUniqueChar(data, 14);
 }
 

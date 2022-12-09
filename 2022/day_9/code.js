@@ -1,5 +1,5 @@
 import input from './input.js';
-import {inputSample1, inputSample2} from './inputSample.js';
+import { inputSample1, inputSample2 } from './inputSample.js';
 
 const inputArray = input.split('\n');
 const inputArrayTest1 = inputSample1.split('\n');
@@ -12,11 +12,15 @@ const toDir = {
   L: [0, -1],
 };
 
-const run = (part, test) => {
+const run = (part, isTest) => {
   const dists = [...Array(part === 2 ? 10 : 2)].map(() => [0, 0]);
   const tail = dists.at(-1);
   const visited = { 0: { 0: 1 } };
-  const data = test ? (part === 1) ? inputArrayTest1 : inputArrayTest2 : inputArray;
+  const data = isTest
+    ? part === 1
+      ? inputArrayTest1
+      : inputArrayTest2
+    : inputArray;
 
   for (const line of data) {
     let [char, n] = line.split(' ');
@@ -49,12 +53,12 @@ const run = (part, test) => {
     .reduce((acc, n) => acc + n);
 };
 
-export function partOne(test) {
-  return run(1, test);
+export function partOne(isTest) {
+  return run(1, isTest);
 }
 
-export function partTwo(test) {
-  return run(2, test);
+export function partTwo(isTest) {
+  return run(2, isTest);
 }
 
 console.log('Part 1: ' + partOne());

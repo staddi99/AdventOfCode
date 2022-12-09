@@ -11,8 +11,8 @@ const dirs = [
   [-1, 0],
 ];
 
-export function partOne(test) {
-  const data = test ? inputArrayTest : inputArray;
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   const map = data.map((line) => line.split('').map(Number));
   const visibles = map.map((row, i) =>
     row.map(
@@ -44,8 +44,8 @@ export function partOne(test) {
   return visibles.flat().reduce((acc, n) => acc + n);
 }
 
-export function partTwo(test) {
-  const data = test ? inputArrayTest : inputArray;
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   const map = data.map((line) => line.split('').map(Number));
   const scores = map.map((row, i) => row.map((_, j) => 1));
   for (let i = 1; i < map.length - 1; i++) {

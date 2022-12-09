@@ -34,16 +34,16 @@ const calc = (input) => {
   return sizes;
 };
 
-export function partOne(test) {
-  const data = test ? inputArrayTest : inputArray;
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var sizes = calc(data);
   return Object.values(sizes)
     .filter((size) => size <= 100000)
     .reduce((acc, size) => acc + size);
 }
 
-export function partTwo(test) {
-  const data = test ? inputArrayTest : inputArray;
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var sizes = calc(data);
   return Math.min(
     ...Object.values(sizes).filter((size) => size >= sizes['/'] - 40000000)

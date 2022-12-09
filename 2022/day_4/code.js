@@ -4,8 +4,8 @@ import inputSample from './inputSample.js';
 const inputArray = input.split('\n');
 const inputArrayTest = inputSample.split('\n');
 
-export function partOne(test) {
-  const data = test ? inputArrayTest : inputArray;
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   return data
     .map((value) => {
       var t = value.split(',').map((e) => {
@@ -23,8 +23,8 @@ export function partOne(test) {
     .reduce((accumulator, currentValue) => accumulator + currentValue);
 }
 
-export function partTwo(test) {
-  const data = test ? inputArrayTest : inputArray;
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   return data
     .map((value) => {
       var t = value.split(',').map((e) => {

@@ -1,21 +1,21 @@
-import { partOne, partTwo } from "./code";
+import { partOne, partTwo } from './code';
 
-describe("part 1", () => {
-  it("should solve sample input", () => {
-    expect(partOne(true)).toBe("CMZ");
+describe('part 1', () => {
+  it('should solve sample input', () => {
+    expect(partOne(true)).toBe('CMZ');
   });
 
-  it("should solve own input", () => {
-    expect(partOne()).toBe("TWSGQHNHL");
+  it('should solve own input', () => {
+    expect(partOne()).toBe('TWSGQHNHL');
   });
 });
 
-describe("part 2", () => {
-  it("should solve sample input", () => {
-    expect(partTwo(true)).toBe("MCD");
+describe('part 2', () => {
+  it('should solve sample input', () => {
+    expect(partTwo(true)).toBe('MCD');
   });
 
-  it("should solve own input", () => {
-    expect(partTwo()).toBe("JNRSCDWPP");
+  it('should solve own input', () => {
+    expect(partTwo()).toBe('JNRSCDWPP');
   });
 });

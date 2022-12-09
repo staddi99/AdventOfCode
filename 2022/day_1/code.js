@@ -1,11 +1,11 @@
-import input from "./input.js";
-import inputSample from "./inputSample.js";
+import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = input.split("\n");
-const inputArrayTest = inputSample.split("\n");
+const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
-const run = (test) => {
-  const data = test ? inputArrayTest : inputArray;
+const run = (isTest) => {
+  const data = isTest ? inputArrayTest : inputArray;
   var resArray = [];
   var count = 0;
   data.forEach((value) => {
@@ -22,13 +22,13 @@ const run = (test) => {
   return resArray;
 };
 
-export function partOne(test) {
-  const res = run(test);
+export function partOne(isTest) {
+  const res = run(isTest);
   return res[0];
 }
 
-export function partTwo(test) {
-  const res = run(test);
+export function partTwo(isTest) {
+  const res = run(isTest);
   return res[0] + res[1] + res[2];
 }
 

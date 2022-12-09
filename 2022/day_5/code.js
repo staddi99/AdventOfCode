@@ -12,8 +12,8 @@ const groupByFour = (array) => {
   return result;
 };
 
-const runTable = (test) => {
-  const data = test ? inputArrayTest : inputArray;
+const runTable = (isTest) => {
+  const data = isTest ? inputArrayTest : inputArray;
   let table = data[0].split('\n');
   table.pop();
 
@@ -27,8 +27,8 @@ const runTable = (test) => {
   return table;
 };
 
-const runMove = (test) => {
-  const data = test ? inputArrayTest : inputArray;
+const runMove = (isTest) => {
+  const data = isTest ? inputArrayTest : inputArray;
   const moveRegex = /move (\d+) from (\d+) to (\d+)/;
   const moves = data[1]
     .trim()
@@ -38,9 +38,9 @@ const runMove = (test) => {
   return moves;
 };
 
-export function partOne(test) {
-  let table = runTable(test);
-  let moves = runMove(test);
+export function partOne(isTest) {
+  let table = runTable(isTest);
+  let moves = runMove(isTest);
 
   let partOne = JSON.parse(JSON.stringify(table));
 
@@ -53,9 +53,9 @@ export function partOne(test) {
   return partOne.map((a) => a[a.length - 1]).join('');
 }
 
-export function partTwo(test) {
-  let table = runTable(test);
-  let moves = runMove(test);
+export function partTwo(isTest) {
+  let table = runTable(isTest);
+  let moves = runMove(isTest);
 
   let partTwo = JSON.parse(JSON.stringify(table));
 
