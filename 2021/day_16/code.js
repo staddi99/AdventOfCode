@@ -1,6 +1,7 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = input;
+const getData = (isTest) => (isTest ? inputSample : input);
 
 const parseValue = (bits) => {
   let i = 0;
@@ -76,8 +77,8 @@ const parsePacket = (bits, versions) => {
   }
 };
 
-function partOne() {
-  const bits = inputArray
+export function partOne(isTest) {
+  const bits = getData(isTest)
     .split('')
     .map((char) => parseInt(char, 16).toString(2).padStart(4, '0'))
     .join('');
@@ -86,8 +87,8 @@ function partOne() {
   return versions.reduce((acc, v) => acc + v);
 }
 
-function partTwo() {
-  const bits = inputArray
+export function partTwo(isTest) {
+  const bits = getData(isTest)
     .split('')
     .map((char) => parseInt(char, 16).toString(2).padStart(4, '0'))
     .join('');

@@ -1,6 +1,7 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = input;
+const getData = (isTest) => (isTest ? inputSample : input);
 
 const getMinVx = (xMin) => {
   let x = 0;
@@ -28,8 +29,8 @@ const getMaxY = ([vx, vy], [[xMin, xMax], [yMin, yMax]]) => {
   return null;
 };
 
-function partOne() {
-  let [, xRange, yRange] = inputArray.match(/x=(.+), y=(.+)/);
+export function partOne(isTest) {
+  let [, xRange, yRange] = getData(isTest).match(/x=(.+), y=(.+)/);
   const [xMin, xMax] = xRange.split('..').map(Number);
   const [yMin, yMax] = yRange.split('..').map(Number);
 
@@ -51,8 +52,8 @@ function partOne() {
   return maxY;
 }
 
-function partTwo() {
-  let [, xRange, yRange] = inputArray.match(/x=(.+), y=(.+)/);
+export function partTwo(isTest) {
+  let [, xRange, yRange] = getData(isTest).match(/x=(.+), y=(.+)/);
   const [xMin, xMax] = xRange.split('..').map(Number);
   const [yMin, yMax] = yRange.split('..').map(Number);
 

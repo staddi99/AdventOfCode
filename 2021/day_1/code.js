@@ -1,19 +1,23 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var inc = 0;
-  inputArray.forEach((value, i, array) => {
+  data.forEach((value, i, array) => {
     if (parseInt(value) > parseInt(array[i - 1])) inc++;
   }, inc);
   return inc;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var inc = 0;
 
-  inputArray
+  data
     .map((value, i, array) => {
       if (i > 1)
         return (

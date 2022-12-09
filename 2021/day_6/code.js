@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split(',').map((f) => parseInt(f, 10));
+const inputArrayTest = inputSample.split(',').map((f) => parseInt(f, 10));
 
 function countAfter(fish, days) {
   const data = new Map();
@@ -18,12 +20,14 @@ function countAfter(fish, days) {
   return fishDays.reduce((sum, pair) => sum + getNext(pair), fishDays.length);
 }
 
-function partOne() {
-  return countAfter(inputArray, 80);
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  return countAfter(data, 80);
 }
 
-function partTwo() {
-  return countAfter(inputArray, 256);
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  return countAfter(data, 256);
 }
 
 console.log('Part 1: ' + partOne());

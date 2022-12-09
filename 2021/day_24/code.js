@@ -1,9 +1,11 @@
 import input from './input.js';
+// import inputSample from './inputSample.js';
 
-const inputArray = input.split('\n');
+// const getData = (isTest) => (isTest ? inputSample : input).split('\n');
+const getData = (isTest) => input.split('\n');
 
-const run = (part) => {
-  const lines = inputArray;
+const run = (part, isTest) => {
+  const lines = getData(isTest);
 
   const terms = [];
   for (let i = 0; i < lines.length; i += 18) {
@@ -23,15 +25,15 @@ const run = (part) => {
       digits[i] = digits[prevI] + complement;
     }
   }
-  return digits.join('');
+  return Number(digits.join(''));
 };
 
-function partOne() {
-  return run(1);
+export function partOne(isTest) {
+  return run(1, isTest);
 }
 
-function partTwo() {
-  return run(2);
+export function partTwo(isTest) {
+  return run(2, isTest);
 }
 
 console.log('Part 1: ' + partOne());

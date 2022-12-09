@@ -1,9 +1,13 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n').map((r) => r.split('').map(Number));
+const inputArrayTest = inputSample
+  .split('\n')
+  .map((r) => r.split('').map(Number));
 
-function partOne() {
-  let input = inputArray;
+export function partOne(isTest) {
+  let input = isTest ? inputArrayTest : inputArray;
   const isLowPoint = (input, x, y) => {
     const point = input[y][x];
     const top = y - 1 < 0 ? Number.MAX_SAFE_INTEGER : input[y - 1][x];
@@ -30,11 +34,10 @@ function partOne() {
     return sum + rowRisk;
   }, 0);
   return riskSum;
-  return;
 }
 
-function partTwo() {
-  let input = inputArray;
+export function partTwo(isTest) {
+  let input = isTest ? inputArrayTest : inputArray;
   const findBasin = (input, x, y) => {
     if (x < 0) return 0;
     if (y < 0) return 0;

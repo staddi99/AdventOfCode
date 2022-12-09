@@ -1,6 +1,7 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = input.split('\n\n');
+const getData = (isTest) => (isTest ? inputSample : input).split('\n\n');
 
 const rots = [
   ([x, y, z]) => [x, y, z],
@@ -37,8 +38,8 @@ const transform = (scanner, rot, dist) => {
   });
 };
 
-function partOne() {
-  const scanners = inputArray.map((scanner) => {
+export function partOne(isTest) {
+  const scanners = getData(isTest).map((scanner) => {
     return scanner
       .split('\n')
       .slice(1)
@@ -116,8 +117,8 @@ function partOne() {
   return beacons.size;
 }
 
-function partTwo() {
-  const scanners = inputArray.map((scanner) => {
+export function partTwo(isTest) {
+  const scanners = getData(isTest).map((scanner) => {
     return scanner
       .split('\n')
       .slice(1)

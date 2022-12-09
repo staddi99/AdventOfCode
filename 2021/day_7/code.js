@@ -1,15 +1,18 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split(',').map(Number);
+const inputArrayTest = inputSample.split(',').map(Number);
 
-const lo = Math.min(...inputArray);
-const hi = Math.max(...inputArray);
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  const lo = Math.min(...data);
+  const hi = Math.max(...data);
 
-function partOne() {
   let minTotal = Infinity;
   for (let depth = lo; depth < hi; depth++) {
     let total = 0;
-    for (const crab of inputArray) {
+    for (const crab of data) {
       total += Math.abs(crab - depth);
     }
     minTotal = Math.min(minTotal, total);
@@ -18,11 +21,15 @@ function partOne() {
   return minTotal;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  const lo = Math.min(...data);
+  const hi = Math.max(...data);
+
   let minTotal = Infinity;
   for (let depth = lo; depth < hi; depth++) {
     let total = 0;
-    for (const crab of inputArray) {
+    for (const crab of data) {
       const dist = Math.abs(crab - depth);
       total += ((1 + dist) * dist) / 2;
     }

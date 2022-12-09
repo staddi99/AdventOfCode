@@ -1,8 +1,10 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 import sum from 'lodash/sum.js';
 import sumBy from 'lodash/sumBy.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 const originalOrder = 'a b c d e f g'.split(' ');
 const validNums = [
@@ -44,25 +46,27 @@ function mapWires(num, permutation) {
 
 const possiblePermutations = permutations(originalOrder);
 
-const outputs1 = inputArray.map((line) => {
-  const [input, output] = line.split(' | ').map((x) => x.split(' '));
+const run = (isTest) => {
+  return (isTest ? inputArrayTest : inputArray).map((line) => {
+    const [input, output] = line.split(' | ').map((x) => x.split(' '));
 
-  const correctPermutation = possiblePermutations.find((permutation) => {
-    const mapped = input.map((num) => mapWires(num, permutation));
-    return mapped.every((num) => validNums.includes(num));
+    const correctPermutation = possiblePermutations.find((permutation) => {
+      const mapped = input.map((num) => mapWires(num, permutation));
+      return mapped.every((num) => validNums.includes(num));
+    });
+
+    return output
+      .map((num) => mapWires(num, correctPermutation))
+      .map((num) => validNums.indexOf(num));
   });
+};
 
-  return output
-    .map((num) => mapWires(num, correctPermutation))
-    .map((num) => validNums.indexOf(num));
-});
-
-function partOne() {
-  return sumBy(outputs1.flat(), (n) => ([1, 4, 7, 8].includes(n) ? 1 : 0));
+export function partOne(isTest) {
+  return sumBy(run(isTest).flat(), (n) => ([1, 4, 7, 8].includes(n) ? 1 : 0));
 }
 
-function partTwo() {
-  return sum(outputs1.map((n) => Number(n.join(''))));
+export function partTwo(isTest) {
+  return sum(run(isTest).map((n) => Number(n.join(''))));
 }
 
 console.log('Part 1: ' + partOne());

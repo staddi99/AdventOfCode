@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 const columns = (input) => {
   return input.reduce(
@@ -23,8 +25,9 @@ const group = (list) =>
     return acc;
   }, {});
 
-function partOne() {
-  const digitSums = columns(inputArray).map(group);
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  const digitSums = columns(data).map(group);
 
   const gamma = (list) =>
     parseInt(list.map((item) => (item['0'] > item['1'] ? 0 : 1)).join(''), 2);
@@ -34,7 +37,8 @@ function partOne() {
   return gamma(digitSums) * epsilon(digitSums);
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   const oxygen = (list) => {
     let numbers = list.slice(0);
     let index = 0;
@@ -49,7 +53,7 @@ function partTwo() {
     }
     return parseInt(numbers[0], 2);
   };
-  
+
   const co2 = (list) => {
     let numbers = list.slice(0);
     let index = 0;
@@ -65,7 +69,7 @@ function partTwo() {
     return parseInt(numbers[0], 2);
   };
 
-  return oxygen(inputArray) * co2(inputArray);
+  return oxygen(data) * co2(data);
 }
 
 console.log('Part 1: ' + partOne());

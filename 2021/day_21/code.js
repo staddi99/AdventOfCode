@@ -1,11 +1,12 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = input.split('\n');
+const getData = (isTest) => (isTest ? inputSample : input).split('\n');
 
 const rolls = [1, 2, 3];
 
-function partOne() {
-  const positions = inputArray.map((line) => +line.split(': ')[1]);
+export function partOne(isTest) {
+  const positions = getData(isTest).map((line) => +line.split(': ')[1]);
   const scores = [0, 0];
 
   let rollCount = 0;
@@ -24,8 +25,8 @@ function partOne() {
   }
 }
 
-function partTwo() {
-  let positions = inputArray.map((line) => +line.split(': ')[1]);
+export function partTwo(isTest) {
+  let positions = getData(isTest).map((line) => +line.split(': ')[1]);
   let scores = [0, 0];
 
   const wins = [0, 0];

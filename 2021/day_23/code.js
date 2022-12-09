@@ -1,6 +1,7 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = input.split('\n');
+const getData = (isTest) => (isTest ? inputSample : input).split('\n');
 
 const MinHeap = {
   siftDown(h, i = 0, v = h[i]) {
@@ -15,10 +16,6 @@ const MinHeap = {
       }
       h[i] = v;
     }
-  },
-  heapify(h) {
-    for (let i = h.length >> 1; i--; ) this.siftDown(h, i);
-    return h;
   },
   pop(h) {
     return this.exchange(h, h.pop());
@@ -135,16 +132,17 @@ const run = (data) => {
   }
 };
 
-function partOne() {
-  return run(inputArray);
+export function partOne(isTest) {
+  return run(getData(isTest));
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = getData(isTest);
   return run(
-    inputArray
+    data
       .slice(0, 3)
       .concat('  #D#C#B#A#  ', '  #D#B#A#C#  ')
-      .concat(inputArray.slice(3))
+      .concat(data.slice(3))
   );
 }
 
