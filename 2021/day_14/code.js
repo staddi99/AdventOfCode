@@ -1,25 +1,29 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const [polymer, subs] = input.split('\n\n');
-let substitutions = {};
-subs
-  .split('\n')
-  .filter((val) => val != '')
-  .map((val) => val.split(' -> '))
-  .forEach((val) => (substitutions[val[0]] = val[1]));
+const run = (isTest) => {
+  const [polymer, subs] = (isTest ? inputSample : input).split('\n\n');
+  let substitutions = {};
+  subs
+    .split('\n')
+    .filter((val) => val != '')
+    .map((val) => val.split(' -> '))
+    .forEach((val) => (substitutions[val[0]] = val[1]));
 
-let polymerPairs = {};
-polymer.split('').forEach((_, idx) => {
-  if (idx == 0) {
-    return;
-  }
-  let pair = polymer.substring(idx - 1, idx + 1);
-  if (pair in polymerPairs) {
-    polymerPairs[pair]++;
-  } else {
-    polymerPairs[pair] = 1;
-  }
-});
+  let polymerPairs = {};
+  polymer.split('').forEach((_, idx) => {
+    if (idx == 0) {
+      return;
+    }
+    let pair = polymer.substring(idx - 1, idx + 1);
+    if (pair in polymerPairs) {
+      polymerPairs[pair]++;
+    } else {
+      polymerPairs[pair] = 1;
+    }
+  });
+  return [polymerPairs, substitutions];
+};
 
 function mostLeastAfter(polymer, substitutions, steps) {
   for (let idx = 0; idx < steps; idx++) {
@@ -74,11 +78,13 @@ function polymerize(polymerPairs, substitutions) {
   return newPolymerPairs;
 }
 
-function partOne() {
+export function partOne(isTest) {
+  const [polymerPairs, substitutions] = run(isTest);
   return mostLeastAfter(polymerPairs, substitutions, 10);
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const [polymerPairs, substitutions] = run(isTest);
   return mostLeastAfter(polymerPairs, substitutions, 40);
 }
 

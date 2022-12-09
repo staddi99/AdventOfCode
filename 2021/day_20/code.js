@@ -1,9 +1,10 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = input.split('\n\n');
+const getData = (isTest) => (isTest ? inputSample : input).split('\n\n');
 
-const run = (nTimes) => {
-  let [alg, img] = inputArray;
+const run = (nTimes, isTest) => {
+  let [alg, img] = getData(isTest);
   alg = alg.split('').map((char) => +(char === '#'));
   img = img
     .split('\n')
@@ -30,12 +31,12 @@ const run = (nTimes) => {
   return img.flat().filter(Boolean).length;
 };
 
-function partOne() {
-  return run(2);
+export function partOne(isTest) {
+  return run(2, isTest);
 }
 
-function partTwo() {
-  return run(50);
+export function partTwo(isTest) {
+  return run(50, isTest);
 }
 
 console.log('Part 1: ' + partOne());

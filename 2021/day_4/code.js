@@ -1,16 +1,22 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n\n');
+const inputArrayTest = inputSample.split('\n\n');
 
-const sequence = inputArray[0].split(',').map((item) => parseInt(item, 10));
-const boards = inputArray.slice(1).map((board) =>
-  board.split('\n').map((line) =>
-    line
-      .split(' ')
-      .filter((i) => i)
-      .map((num) => parseInt(num, 10))
-  )
-);
+const run = (isTest) => {
+  const data = isTest ? inputArrayTest : inputArray;
+  const sequence = data[0].split(',').map((item) => parseInt(item, 10));
+  const boards = data.slice(1).map((board) =>
+    board.split('\n').map((line) =>
+      line
+        .split(' ')
+        .filter((i) => i)
+        .map((num) => parseInt(num, 10))
+    )
+  );
+  return [sequence, boards];
+};
 
 const transpose = (matrix) => {
   return matrix[0].map((_, colIndex) => matrix.map((row) => row[colIndex]));
@@ -38,7 +44,8 @@ const isBoardWin = (numbers, board) => {
   return horizontal || vertical;
 };
 
-function partOne() {
+export function partOne(isTest) {
+  const [sequence, boards] = run(isTest);
   const getWinBoard = (numbers, boards) => {
     const iteration = [];
     for (let number of numbers) {
@@ -51,11 +58,11 @@ function partOne() {
       }, null);
       if (winBoard) return [iteration, winBoard];
     }
-    return [null, null];
+    // return [null, null];
   };
 
   const [iteration, winBoard] = getWinBoard(sequence, boards);
-  if (!iteration || !winBoard) return;
+  // if (!iteration || !winBoard) return;
   return (
     Array.from(difference(winBoard.flat(), iteration).values()).reduce(
       (a, b) => a + b
@@ -63,7 +70,8 @@ function partOne() {
   );
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const [sequence, boards] = run(isTest);
   const getLastWinBoard = (numbers, boards) => {
     const iteration = [];
     let boardSet = new Set(boards);
@@ -80,10 +88,10 @@ function partTwo() {
         return [iteration, lastWinBoard];
       }
     }
-    return null;
+    // return null;
   };
   const [lastBoardIteration, lastWinBoard] = getLastWinBoard(sequence, boards);
-  if (!lastBoardIteration || !lastWinBoard) return;
+  // if (!lastBoardIteration || !lastWinBoard) return;
 
   return (
     Array.from(

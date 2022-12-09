@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 const calc = (input) => {
   const sizes = { '/': 0 };
@@ -32,15 +34,17 @@ const calc = (input) => {
   return sizes;
 };
 
-function partOne() {
-  var sizes = calc(inputArray);
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  var sizes = calc(data);
   return Object.values(sizes)
     .filter((size) => size <= 100000)
     .reduce((acc, size) => acc + size);
 }
 
-function partTwo() {
-  var sizes = calc(inputArray);
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  var sizes = calc(data);
   return Math.min(
     ...Object.values(sizes).filter((size) => size >= sizes['/'] - 40000000)
   );

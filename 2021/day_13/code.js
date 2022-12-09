@@ -1,14 +1,18 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
-const dots = inputArray.filter(
-  (line) => line.length > 0 && !line.startsWith('fold')
-);
+const dots = (isTest) =>
+  (isTest ? inputArrayTest : inputArray).filter(
+    (line) => line.length > 0 && !line.startsWith('fold')
+  );
 
-const instructions = inputArray
-  .filter((line) => line.startsWith('fold'))
-  .map((line) => line.substring('fold along '.length).split('='));
+const instructions = (isTest) =>
+  (isTest ? inputArrayTest : inputArray)
+    .filter((line) => line.startsWith('fold'))
+    .map((line) => line.substring('fold along '.length).split('='));
 
 const fold = (dots, axis, position) => {
   return dots.map((dot) => {
@@ -25,13 +29,13 @@ const fold = (dots, axis, position) => {
   });
 };
 
-function partOne() {
-  const [first] = instructions;
+export function partOne(isTest) {
+  const [first] = instructions(isTest);
   const [axis, position] = first;
-  return new Set(fold(dots, axis, position)).size;
+  return new Set(fold(dots(isTest), axis, position)).size;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
   const printMatrix = (matrix) => {
     const rows = ['\n'];
     for (const row of matrix) {
@@ -41,8 +45,8 @@ function partTwo() {
     return rows.join('\n');
   };
 
-  let current = dots;
-  for (const instruction of instructions) {
+  let current = dots(isTest);
+  for (const instruction of instructions(isTest)) {
     const [axis, position] = instruction;
     current = fold(current, axis, position);
   }

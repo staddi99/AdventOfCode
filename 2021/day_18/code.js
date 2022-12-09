@@ -1,6 +1,7 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = input.split('\n');
+const getData = (isTest) => (isTest ? inputSample : input).split('\n');
 
 const magnitude = (pair) => {
   const [a, b] = pair.map((n) => (Array.isArray(n) ? magnitude(n) : n));
@@ -57,22 +58,23 @@ const reduce = (line) => {
   return line;
 };
 
-function partOne() {
+export function partOne(isTest) {
   return magnitude(
     JSON.parse(
-      reduce(inputArray.reduce((acc, line) => reduce(`[${acc},${line}]`)))
+      reduce(getData(isTest).reduce((acc, line) => reduce(`[${acc},${line}]`)))
     )
   );
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = getData(isTest);
   let max = 0;
-  for (let i = 0; i < inputArray.length - 1; i++) {
-    for (let j = i + 1; j < inputArray.length; j++) {
+  for (let i = 0; i < data.length - 1; i++) {
+    for (let j = i + 1; j < data.length; j++) {
       max = Math.max(
         max,
-        magnitude(JSON.parse(reduce(`[${inputArray[i]},${inputArray[j]}]`))),
-        magnitude(JSON.parse(reduce(`[${inputArray[j]},${inputArray[i]}]`)))
+        magnitude(JSON.parse(reduce(`[${data[i]},${data[j]}]`))),
+        magnitude(JSON.parse(reduce(`[${data[j]},${data[i]}]`)))
       );
     }
   }

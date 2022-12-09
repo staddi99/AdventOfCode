@@ -1,9 +1,10 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = input.split('\n');
+const getData = (isTest) => (isTest ? inputSample : input).split('\n');
 
-function partOne() {
-  let map = inputArray.map((row) => row.split(''));
+export function partOne(isTest) {
+  let map = getData(isTest).map((row) => row.split(''));
   let step = 0;
   let hasMoved = true;
   while (hasMoved) {
@@ -45,7 +46,7 @@ function partOne() {
   return step;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
   return;
 }
 

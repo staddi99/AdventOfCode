@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 const corruptedKetScore = {
   ')': 3,
@@ -23,36 +25,42 @@ const incompletedBraScore = {
   '<': 4,
 };
 
-let corruptedScore = 0,
-  incompletedScores = [];
+const run = (isTest) => {
+  const data = isTest ? inputArrayTest : inputArray;
+  let corruptedScore = 0,
+    incompletedScores = [];
 
-inputArray.map((line) => {
-  let stack = [],
-    corrupted = false;
-  line.split('').some((c) => {
-    if (']>})'.includes(c)) {
-      if (stack.length == 0 || stack.pop() != ket2bra[c]) {
-        corruptedScore += corruptedKetScore[c];
-        corrupted = true;
-        return true;
-      }
-    } else stack.push(c);
+  data.map((line) => {
+    let stack = [],
+      corrupted = false;
+    line.split('').some((c) => {
+      if (']>})'.includes(c)) {
+        if (stack.length == 0 || stack.pop() != ket2bra[c]) {
+          corruptedScore += corruptedKetScore[c];
+          corrupted = true;
+          return true;
+        }
+      } else stack.push(c);
+    });
+    if (!corrupted)
+      incompletedScores.push(
+        stack
+          .reverse()
+          .reduce((score, c) => score * 5 + incompletedBraScore[c], 0)
+      );
   });
-  if (!corrupted)
-    incompletedScores.push(
-      stack
-        .reverse()
-        .reduce((score, c) => score * 5 + incompletedBraScore[c], 0)
-    );
-});
 
-function partOne() {
-  return corruptedScore;
+  return [corruptedScore, incompletedScores.filter(num => !isNaN(num))];
+};
+
+export function partOne(isTest) {
+  return run(isTest)[0];
 }
 
-function partTwo() {
-  return incompletedScores.sort((a, b) => a - b)[
-    Math.floor(incompletedScores.length / 2)
+export function partTwo(isTest) {
+  const data = run(isTest)[1];
+  return data.sort((a, b) => a - b)[
+    Math.floor(data.length / 2)
   ];
 }
 

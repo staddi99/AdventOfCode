@@ -1,9 +1,12 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const getInput = () => {
-  const iinput = input.split('\n').map((line) => line.split('-'));
+const getInput = (isTest) => {
+  const data = (isTest ? inputSample : input)
+    .split('\n')
+    .map((line) => line.split('-'));
   const nodes = new Map();
-  for (let line of iinput) {
+  for (let line of data) {
     const [begin, end] = line;
     if (!nodes.get(begin)) nodes.set(begin, new Node(begin));
     if (!nodes.get(end)) nodes.set(end, new Node(end));
@@ -52,10 +55,6 @@ class Path {
     return this.visited.has(node.name);
   }
 
-  getPath() {
-    return this.crumb;
-  }
-
   isEnd() {
     return this.visited.has('end');
   }
@@ -97,14 +96,14 @@ const generatePaths =
     return allPaths;
   };
 
-function partOne() {
-  const map = getInput();
+export function partOne(isTest) {
+  const map = getInput(isTest);
   const paths = generatePaths(Path)(map.get('start'));
   return paths.length;
 }
 
-function partTwo() {
-  const map = getInput();
+export function partTwo(isTest) {
+  const map = getInput(isTest);
   const paths = generatePaths(ExtraVisitPath)(map.get('start'));
   return paths.length;
 }

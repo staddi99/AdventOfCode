@@ -1,14 +1,18 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
-const pairs = inputArray.map((line) =>
-  line
-    .split(' -> ')
-    .map((pair) => pair.split(',').map((val) => parseInt(val, 10)))
-);
+const run = (isTest) =>
+  (isTest ? inputArrayTest : inputArray).map((line) =>
+    line
+      .split(' -> ')
+      .map((pair) => pair.split(',').map((val) => parseInt(val, 10)))
+  );
 
-function partOne() {
+export function partOne(isTest) {
+  const pairs = run(isTest);
   const spread = (pairs) => {
     const result = [];
     for (let pair of pairs) {
@@ -50,7 +54,8 @@ function partOne() {
     .length;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const pairs = run(isTest);
   const spread2 = (pairs) => {
     const result = [];
     for (let pair of pairs) {

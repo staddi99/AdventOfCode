@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 const dirs = [
   [0, 1],
@@ -32,8 +34,10 @@ const minTotal = (risks, start, end) => {
   }
 };
 
-const run = (nTimes) => {
-  const risks = inputArray.map((line) => line.split('').map(Number));
+const run = (nTimes, isTest) => {
+  const risks = (isTest ? inputArrayTest : inputArray).map((line) =>
+    line.split('').map(Number)
+  );
 
   const allRisks = [];
   for (let i = 0; i < nTimes * risks.length; i++) {
@@ -58,12 +62,12 @@ const run = (nTimes) => {
   );
 };
 
-function partOne() {
-  return run(1);
+export function partOne(isTest) {
+  return run(1, isTest);
 }
 
-function partTwo() {
-  return run(5);
+export function partTwo(isTest) {
+  return run(5, isTest);
 }
 
 console.log('Part 1: ' + partOne());

@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 const scores = {
   A: 1,
@@ -11,9 +13,10 @@ const scores = {
   Z: 3,
 };
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var sum = 0;
-  inputArray.forEach((element) => {
+  data.forEach((element) => {
     const [a, b] = element.split(' ');
     sum += scores[b];
     sum +=
@@ -28,9 +31,10 @@ function partOne() {
   return sum;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var sum = 0;
-  inputArray.forEach((element) => {
+  data.forEach((element) => {
     const [a, b] = element.split(' ');
     switch (b) {
       case 'X':

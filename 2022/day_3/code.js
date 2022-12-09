@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 function locInAlphabet(char) {
   return char.charCodeAt(0) - 96 < 0
@@ -8,9 +10,10 @@ function locInAlphabet(char) {
     : char.charCodeAt(0) - 96;
 }
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var sum = 0;
-  inputArray.forEach((value) => {
+  data.forEach((value) => {
     var a = value.slice(0, value.length / 2).split('');
     var b = value.slice(value.length / 2).split('');
 
@@ -20,15 +23,16 @@ function partOne() {
   return sum;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var sum = 0;
-  for (let index = 0; index < inputArray.length; index += 3) {
-    var com = inputArray[index]
+  for (let index = 0; index < data.length; index += 3) {
+    var com = data[index]
       .split('')
       .filter(
         (element) =>
-          inputArray[index + 1].split('').includes(element) &&
-          inputArray[index + 2].split('').includes(element)
+          data[index + 1].split('').includes(element) &&
+          data[index + 2].split('').includes(element)
       )[0];
     sum += locInAlphabet(com);
   }

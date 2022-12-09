@@ -1,7 +1,10 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = () => {
-  return input.split('\n').map((line) => line.split('').map(Number));
+const data = (isTest) => {
+  return (isTest ? inputSample : input)
+    .split('\n')
+    .map((line) => line.split('').map(Number));
 };
 
 const increaseCellValue = (input, row, column, flashed = new Set()) => {
@@ -39,8 +42,8 @@ const iterate = (input) => {
   return flashed.size;
 };
 
-function partOne() {
-  let input = inputArray();
+export function partOne(isTest) {
+  let input = data(isTest);
   let totalFlashed = 0;
   for (let i = 0; i < 100; i++) {
     totalFlashed += iterate(input);
@@ -48,8 +51,8 @@ function partOne() {
   return totalFlashed;
 }
 
-function partTwo() {
-  let input = inputArray();
+export function partTwo(isTest) {
+  let input = data(isTest);
   let step = 1;
   while (true) {
     const flashedCount = iterate(input);

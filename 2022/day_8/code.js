@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 const dirs = [
   [0, 1],
@@ -9,8 +11,9 @@ const dirs = [
   [-1, 0],
 ];
 
-function partOne() {
-  const map = inputArray.map((line) => line.split('').map(Number));
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  const map = data.map((line) => line.split('').map(Number));
   const visibles = map.map((row, i) =>
     row.map(
       (_, j) =>
@@ -41,8 +44,9 @@ function partOne() {
   return visibles.flat().reduce((acc, n) => acc + n);
 }
 
-function partTwo() {
-  const map = inputArray.map((line) => line.split('').map(Number));
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  const map = data.map((line) => line.split('').map(Number));
   const scores = map.map((row, i) => row.map((_, j) => 1));
   for (let i = 1; i < map.length - 1; i++) {
     for (let j = 1; j < map[i].length - 1; j++) {

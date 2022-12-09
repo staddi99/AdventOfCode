@@ -1,6 +1,8 @@
 import input from './input.js';
+import { inputSample1, inputSample2 } from './inputSample.js';
 
-const inputArray = input.split('\n');
+const getData = (part, isTest) =>
+  (isTest ? (part === 1 ? inputSample1 : inputSample2) : input).split('\n');
 
 const intersect = (a, b) => {
   const c = [0, 1, 2].map((i) => [
@@ -13,9 +15,9 @@ const intersect = (a, b) => {
   return c;
 };
 
-const run = (part) => {
+const run = (part, isTest) => {
   const cuboids = [];
-  for (const line of inputArray) {
+  for (const line of getData(part, isTest)) {
     let [on1, cuboid1] = line.split(' ');
     on1 = on1 === 'on';
     cuboid1 = cuboid1
@@ -59,12 +61,12 @@ const run = (part) => {
     .reduce((acc, n) => acc + n);
 };
 
-function partOne() {
-  return run(1);
+export function partOne(isTest) {
+  return run(1, isTest);
 }
 
-function partTwo() {
-  return run(2);
+export function partTwo(isTest) {
+  return run(2, isTest);
 }
 
 console.log('Part 1: ' + partOne());
