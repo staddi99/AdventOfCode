@@ -1,9 +1,12 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
-function partOne() {
-  return inputArray
+export function partOne(test) {
+  const data = test ? inputArrayTest : inputArray;
+  return data
     .map((value) => {
       var t = value.split(',').map((e) => {
         var ip = e.split('-').map(Number);
@@ -20,8 +23,9 @@ function partOne() {
     .reduce((accumulator, currentValue) => accumulator + currentValue);
 }
 
-function partTwo() {
-  return inputArray
+export function partTwo(test) {
+  const data = test ? inputArrayTest : inputArray;
+  return data
     .map((value) => {
       var t = value.split(',').map((e) => {
         var ip = e.split('-').map(Number);

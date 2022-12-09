@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n\n');
+const inputArrayTest = inputSample.split('\n\n');
 
 const groupByFour = (array) => {
   const result = [];
@@ -10,25 +12,36 @@ const groupByFour = (array) => {
   return result;
 };
 
-let table = inputArray[0].split('\n');
-table.pop();
+const runTable = (test) => {
+  const data = test ? inputArrayTest : inputArray;
+  let table = data[0].split('\n');
+  table.pop();
 
-table = table
-  .map((a) => a.split(''))
-  .map((a) => groupByFour(a))
-  .map((a) => a.map((b) => b[1]))
-  .reverse();
-table = table[0].map((_, colIndex) => table.map((row) => row[colIndex]));
-table = table.map((a) => a.filter((b) => b !== ' '));
+  table = table
+    .map((a) => a.split(''))
+    .map((a) => groupByFour(a))
+    .map((a) => a.map((b) => b[1]))
+    .reverse();
+  table = table[0].map((_, colIndex) => table.map((row) => row[colIndex]));
+  table = table.map((a) => a.filter((b) => b !== ' '));
+  return table;
+};
 
-const moveRegex = /move (\d+) from (\d+) to (\d+)/;
-const moves = inputArray[1]
-  .trim()
-  .split('\n')
-  .map((a) => moveRegex.exec(a))
-  .map((a) => [parseInt(a[1]), parseInt(a[2]), parseInt(a[3])]);
+const runMove = (test) => {
+  const data = test ? inputArrayTest : inputArray;
+  const moveRegex = /move (\d+) from (\d+) to (\d+)/;
+  const moves = data[1]
+    .trim()
+    .split('\n')
+    .map((a) => moveRegex.exec(a))
+    .map((a) => [parseInt(a[1]), parseInt(a[2]), parseInt(a[3])]);
+  return moves;
+};
 
-function partOne() {
+export function partOne(test) {
+  let table = runTable(test);
+  let moves = runMove(test);
+
   let partOne = JSON.parse(JSON.stringify(table));
 
   moves.forEach((a) => {
@@ -40,7 +53,10 @@ function partOne() {
   return partOne.map((a) => a[a.length - 1]).join('');
 }
 
-function partTwo() {
+export function partTwo(test) {
+  let table = runTable(test);
+  let moves = runMove(test);
+
   let partTwo = JSON.parse(JSON.stringify(table));
 
   moves.forEach((a) => {
