@@ -1,5 +1,5 @@
 import input from './input.js';
-import inputSample from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
 const inputArrayTest = inputSample.split('\n');
