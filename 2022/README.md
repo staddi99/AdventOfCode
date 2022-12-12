@@ -23,7 +23,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 9: Rope Bridge](day_9/)
 *  [✅ Day 10: Cathode-Ray Tube](day_10/)
 *  [✅ Day 11: Monkey in the Middle](day_11/)
-*  [❔ Day 12: TBD]()
+*  [✅ Day 12: Hill Climbing Algorithm](day_12/)
 *  [❔ Day 13: TBD]()
 *  [❔ Day 14: TBD]()
 *  [❔ Day 15: TBD]()
