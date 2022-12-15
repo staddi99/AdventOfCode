@@ -1,20 +1,25 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = input.split('\n').map(x => x.split(''));
+const inputArray = input.split('\n').map((x) => x.split(''));
+const inputArrayTest = inputSample.split('\n').map((x) => x.split(''));
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   const getAdjacentSeats = (i = 0, j = 0) => {
     let seats = [];
     if (i - 1 !== -1 && j - 1 !== -1) seats.push([i - 1, j - 1]);
     if (i - 1 !== -1) seats.push([i - 1, j]);
-    if (i - 1 !== -1 && j + 1 < inputArray[0].length) seats.push([i - 1, j + 1]);
-    if (j + 1 < inputArray[0].length) seats.push([i, j + 1]);
-    if (i + 1 < inputArray.length && j + 1 < inputArray[0].length) seats.push([i + 1, j + 1]);
-    if (i + 1 < inputArray.length) seats.push([i + 1, j]);
-    if (i + 1 < inputArray.length && j - 1 !== -1) seats.push([i + 1, j - 1]);
+    if (i - 1 !== -1 && j + 1 < data[0].length)
+      seats.push([i - 1, j + 1]);
+    if (j + 1 < data[0].length) seats.push([i, j + 1]);
+    if (i + 1 < data.length && j + 1 < data[0].length)
+      seats.push([i + 1, j + 1]);
+    if (i + 1 < data.length) seats.push([i + 1, j]);
+    if (i + 1 < data.length && j - 1 !== -1) seats.push([i + 1, j - 1]);
     if (j - 1 !== -1) seats.push([i, j - 1]);
     return seats;
-  }
+  };
 
   const changeSeatStates = (arr) => {
     let seats = JSON.parse(JSON.stringify(arr));
@@ -29,16 +34,15 @@ function partOne() {
         }
         if (tempSeats[i][j] !== '.' && occupiedCount === 0) {
           seats[i][j] = '#';
-        }
-        else if (tempSeats[i][j] === '#' && occupiedCount >= 4) {
+        } else if (tempSeats[i][j] === '#' && occupiedCount >= 4) {
           seats[i][j] = 'L';
         }
       }
     }
     return seats;
-  }
+  };
 
-  let oldSeatStates = JSON.parse(JSON.stringify(inputArray));
+  let oldSeatStates = JSON.parse(JSON.stringify(data));
   let currentSeatStates = changeSeatStates(oldSeatStates);
 
   while (JSON.stringify(oldSeatStates) !== JSON.stringify(currentSeatStates)) {
@@ -46,17 +50,18 @@ function partOne() {
     currentSeatStates = changeSeatStates(oldSeatStates);
   }
 
-  return currentSeatStates.flat().filter(x => x === '#').length;
+  return currentSeatStates.flat().filter((x) => x === '#').length;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   const getVisibleSeats = (i = 0, j = 0) => {
     let seats = [];
     if (i - 1 !== -1 && j - 1 !== -1) {
-      if (inputArray[i - 1][j - 1] === ".") {
+      if (data[i - 1][j - 1] === '.') {
         let seat = [i - 1, j - 1];
         let push = true;
-        while (inputArray[seat[0]][seat[1]] === ".") {
+        while (data[seat[0]][seat[1]] === '.') {
           seat[0]--;
           seat[1]--;
           if (seat[0] === -1 || seat[1] === -1) {
@@ -70,10 +75,10 @@ function partTwo() {
       }
     }
     if (i - 1 !== -1) {
-      if (inputArray[i - 1][j] === ".") {
+      if (data[i - 1][j] === '.') {
         let seat = [i - 1, j];
         let push = true;
-        while (inputArray[seat[0]][seat[1]] === ".") {
+        while (data[seat[0]][seat[1]] === '.') {
           seat[0]--;
           if (seat[0] === -1) {
             push = false;
@@ -85,14 +90,14 @@ function partTwo() {
         seats.push([i - 1, j]);
       }
     }
-    if (i - 1 !== -1 && j + 1 < inputArray[0].length) {
-      if (inputArray[i - 1][j + 1] === ".") {
+    if (i - 1 !== -1 && j + 1 < data[0].length) {
+      if (data[i - 1][j + 1] === '.') {
         let seat = [i - 1, j + 1];
         let push = true;
-        while (inputArray[seat[0]][seat[1]] === ".") {
+        while (data[seat[0]][seat[1]] === '.') {
           seat[0]--;
           seat[1]++;
-          if (seat[0] === -1 || seat[1] >= inputArray[0].length) {
+          if (seat[0] === -1 || seat[1] >= data[0].length) {
             push = false;
             break;
           }
@@ -102,13 +107,13 @@ function partTwo() {
         seats.push([i - 1, j + 1]);
       }
     }
-    if (j + 1 < inputArray[0].length) {
-      if (inputArray[i][j + 1] === ".") {
+    if (j + 1 < data[0].length) {
+      if (data[i][j + 1] === '.') {
         let seat = [i, j + 1];
         let push = true;
-        while (inputArray[seat[0]][seat[1]] === ".") {
+        while (data[seat[0]][seat[1]] === '.') {
           seat[1]++;
-          if (seat[1] >= inputArray[0].length) {
+          if (seat[1] >= data[0].length) {
             push = false;
             break;
           }
@@ -118,14 +123,14 @@ function partTwo() {
         seats.push([i, j + 1]);
       }
     }
-    if (i + 1 < inputArray.length && j + 1 < inputArray[0].length) {
-      if (inputArray[i + 1][j + 1] === ".") {
+    if (i + 1 < data.length && j + 1 < data[0].length) {
+      if (data[i + 1][j + 1] === '.') {
         let seat = [i + 1, j + 1];
         let push = true;
-        while (inputArray[seat[0]][seat[1]] === ".") {
+        while (data[seat[0]][seat[1]] === '.') {
           seat[0]++;
           seat[1]++;
-          if (seat[0] >= inputArray.length || seat[1] >= inputArray[0].length) {
+          if (seat[0] >= data.length || seat[1] >= data[0].length) {
             push = false;
             break;
           }
@@ -135,13 +140,13 @@ function partTwo() {
         seats.push([i + 1, j + 1]);
       }
     }
-    if (i + 1 < inputArray.length) {
-      if (inputArray[i + 1][j] === ".") {
+    if (i + 1 < data.length) {
+      if (data[i + 1][j] === '.') {
         let seat = [i + 1, j];
         let push = true;
-        while (inputArray[seat[0]][seat[1]] === ".") {
+        while (data[seat[0]][seat[1]] === '.') {
           seat[0]++;
-          if (seat[0] >= inputArray.length) {
+          if (seat[0] >= data.length) {
             push = false;
             break;
           }
@@ -151,14 +156,14 @@ function partTwo() {
         seats.push([i + 1, j]);
       }
     }
-    if (i + 1 < inputArray.length && j - 1 !== -1) {
-      if (inputArray[i + 1][j - 1] === ".") {
+    if (i + 1 < data.length && j - 1 !== -1) {
+      if (data[i + 1][j - 1] === '.') {
         let seat = [i + 1, j - 1];
         let push = true;
-        while (inputArray[seat[0]][seat[1]] === ".") {
+        while (data[seat[0]][seat[1]] === '.') {
           seat[0]++;
           seat[1]--;
-          if (seat[0] >= inputArray.length || seat[1] === -1) {
+          if (seat[0] >= data.length || seat[1] === -1) {
             push = false;
             break;
           }
@@ -169,10 +174,10 @@ function partTwo() {
       }
     }
     if (j - 1 !== -1) {
-      if (inputArray[i][j - 1] === ".") {
+      if (data[i][j - 1] === '.') {
         let seat = [i, j - 1];
         let push = true;
-        while (inputArray[seat[0]][seat[1]] === ".") {
+        while (data[seat[0]][seat[1]] === '.') {
           seat[1]--;
           if (seat[1] === -1) {
             push = false;
@@ -185,7 +190,7 @@ function partTwo() {
       }
     }
     return seats;
-  }
+  };
 
   const changeSeatStates = (arr) => {
     let seats = JSON.parse(JSON.stringify(arr));
@@ -194,20 +199,19 @@ function partTwo() {
       for (let j = 0; j < arr[i].length; j++) {
         let occupiedCount = 0;
         for (const seat of getVisibleSeats(i, j)) {
-          if (tempSeats[seat[0]][seat[1]] === "#") {
+          if (tempSeats[seat[0]][seat[1]] === '#') {
             occupiedCount++;
           }
         }
-        if (tempSeats[i][j] !== "." && occupiedCount === 0) {
-          seats[i][j] = "#";
-        }
-        else if (tempSeats[i][j] === "#" && occupiedCount >= 5) {
-          seats[i][j] = "L";
+        if (tempSeats[i][j] !== '.' && occupiedCount === 0) {
+          seats[i][j] = '#';
+        } else if (tempSeats[i][j] === '#' && occupiedCount >= 5) {
+          seats[i][j] = 'L';
         }
       }
     }
     return seats;
-  }
+  };
 
   let oldSeatStates = JSON.parse(JSON.stringify(inputArray));
   let currentSeatStates = changeSeatStates(oldSeatStates);
@@ -217,8 +221,8 @@ function partTwo() {
     currentSeatStates = changeSeatStates(oldSeatStates);
   }
 
-  return currentSeatStates.flat().filter(x => x === '#').length;
+  return currentSeatStates.flat().filter((x) => x === '#').length;
 }
 
-console.log("Part 1: " + partOne());
-console.log("Part 2: " + partTwo());
+console.log('Part 1: ' + partOne());
+console.log('Part 2: ' + partTwo());

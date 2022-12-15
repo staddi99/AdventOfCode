@@ -1,42 +1,62 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
-let ship = {
-  angle: 0,
-  direction: ['E', 'N', 'W', 'S'],
-  north: 0,
-  east: 0,
-};
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
 
-let operations = {
-  N: (distance) => (ship.north += distance),
-  S: (distance) => (ship.north -= distance),
-  E: (distance) => (ship.east += distance),
-  W: (distance) => (ship.east -= distance),
-  L: (angle) => (ship.angle += angle),
-  R: (angle) => (ship.angle += 360 - angle),
-  F: (distance) => {
-    let dir = ship.direction[(ship.angle / 90) % 4];
-    return operations[dir](distance);
-  },
-};
-
-function partOne() {
-  inputArray.forEach((element) => {
-    let [dir, val] = [element.match(/[A-Z]+/g), element.match(/[0-9]+/g)];
-    operations[dir](Number(val));
-  });
-
-  return Math.abs(ship.north) + Math.abs(ship.east);
-}
-
-function partTwo() {
-  ship = {
+  let ship = {
     angle: 0,
     direction: ['E', 'N', 'W', 'S'],
     north: 0,
     east: 0,
+  };
+
+  let operations = {
+    N: (distance) => (ship.north += distance),
+    S: (distance) => (ship.north -= distance),
+    E: (distance) => (ship.east += distance),
+    W: (distance) => (ship.east -= distance),
+    L: (angle) => (ship.angle += angle),
+    R: (angle) => (ship.angle += 360 - angle),
+    F: (distance) => {
+      let dir = ship.direction[(ship.angle / 90) % 4];
+      return operations[dir](distance);
+    },
+  };
+
+  data.forEach((element) => {
+    let [dir, val] = [element.match(/[A-Z]+/g), element.match(/[0-9]+/g)];
+    operations[dir](Number(val));
+  });
+
+  const res = Math.abs(ship.north) + Math.abs(ship.east);
+  console.log(res);
+  return res;
+}
+
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let ship = {
+    angle: 0,
+    direction: ['E', 'N', 'W', 'S'],
+    north: 0,
+    east: 0,
+  };
+
+  let operations = {
+    N: (distance) => (ship.north += distance),
+    S: (distance) => (ship.north -= distance),
+    E: (distance) => (ship.east += distance),
+    W: (distance) => (ship.east -= distance),
+    L: (angle) => (ship.angle += angle),
+    R: (angle) => (ship.angle += 360 - angle),
+    F: (distance) => {
+      let dir = ship.direction[(ship.angle / 90) % 4];
+      return operations[dir](distance);
+    },
   };
 
   let wayMatrix = [
@@ -68,7 +88,7 @@ function partTwo() {
     },
   };
 
-  inputArray.forEach((element) => {
+  data.forEach((element) => {
     let [dir, val] = [element.match(/[A-Z]+/g), element.match(/[0-9]+/g)];
     operations2[dir](Number(val));
   });

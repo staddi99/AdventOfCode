@@ -1,10 +1,13 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
-function partOne() {
-  let arr = parseInt(inputArray[0]);
-  let busses = inputArray[1]
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let arr = parseInt(data[0]);
+  let busses = data[1]
     .split(',')
     .filter((e) => e != 'x')
     .map(Number);
@@ -22,8 +25,9 @@ function partOne() {
   return bid * time;
 }
 
-function partTwo() {
-  let busses = inputArray[1]
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let busses = data[1]
     .split(',')
     .map((el, i) => [parseInt(el), i])
     .filter((el) => !isNaN(el[0]));

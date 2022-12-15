@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n\n');
+const inputArrayTest = inputSample.split('\n\n');
 
 const game = ([deck1, deck2], recursive) => {
   const previousRounds = new Set();
@@ -24,20 +26,21 @@ const game = ([deck1, deck2], recursive) => {
   return deck1.length === 0 ? 2 : 1;
 };
 
-const getWinnerScore = (recursive) => {
-  const decks = inputArray.map((x) => x.split('\n').slice(1).map(Number));
+const getWinnerScore = (recursive, isTest) => {
+  const data = isTest ? inputArrayTest : inputArray;
+  const decks = data.map((x) => x.split('\n').slice(1).map(Number));
   const winner = game(decks, recursive);
   return decks[winner - 1]
     .reverse()
     .reduce((acc, x, i) => acc + x * (i + 1), 0);
 };
 
-function partOne() {
-  return getWinnerScore(false);
+export function partOne(isTest) {
+  return getWinnerScore(false, isTest);
 }
 
-function partTwo() {
-  return getWinnerScore(true);
+export function partTwo(isTest) {
+  return getWinnerScore(true, isTest);
 }
 
 console.log('Part 1: ' + partOne());

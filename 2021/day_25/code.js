@@ -46,9 +46,4 @@ export function partOne(isTest) {
   return step;
 }
 
-export function partTwo(isTest) {
-  return;
-}
-
 console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());

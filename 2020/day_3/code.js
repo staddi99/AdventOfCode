@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 function findTrees(terrain, xSlope, ySlope) {
   const height = terrain.length;
@@ -22,21 +24,24 @@ function findTrees(terrain, xSlope, ySlope) {
   return hitTrees;
 }
 
-function partOne() {
-  return findTrees(inputArray, 3, 1);
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  return findTrees(data, 3, 1);
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var res = 0;
 
-  res = findTrees(inputArray, 1, 1)
-      * findTrees(inputArray, 3, 1)
-      * findTrees(inputArray, 5, 1)
-      * findTrees(inputArray, 7, 1)
-      * findTrees(inputArray, 1, 2);
-  
+  res =
+    findTrees(data, 1, 1) *
+    findTrees(data, 3, 1) *
+    findTrees(data, 5, 1) *
+    findTrees(data, 7, 1) *
+    findTrees(data, 1, 2);
+
   return res;
 }
 
-console.log("Part 1: " + partOne());
-console.log("Part 2: " + partTwo());
+console.log('Part 1: ' + partOne());
+console.log('Part 2: ' + partTwo());
