@@ -25,7 +25,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 11: Monkey in the Middle](day_11/)
 *  [✅ Day 12: Hill Climbing Algorithm](day_12/)
 *  [✅ Day 13: Distress Signal](day_13/)
-*  [❔ Day 14: TBD]()
+*  [✅ Day 14: Regolith Reservoir](day_14/)
 *  [❔ Day 15: TBD]()
 *  [❔ Day 16: TBD]()
 *  [❔ Day 17: TBD]()
