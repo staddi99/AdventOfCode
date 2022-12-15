@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 class Computer {
   constructor(input) {
@@ -95,15 +97,17 @@ class Computer {
   }
 }
 
-function partOne() {
-  let c = new Computer(inputArray);
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let c = new Computer(data);
   return c.runUntil2nd();
 }
 
-function partTwo() {
-  let c = new Computer(inputArray)
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let c = new Computer(data);
   return c.tryChanges();
 }
 
-console.log("Part 1: " + partOne());
-console.log("Part 2: " + partTwo());
+console.log('Part 1: ' + partOne());
+console.log('Part 2: ' + partTwo());

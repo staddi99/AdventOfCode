@@ -1,18 +1,21 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   let activeCubes = new Map();
-  for (let y = 0; y < inputArray.length; y++) {
-    for (let x = 0; x < inputArray[0].length; x++) {
-      if (inputArray[y][x] === '#') {
+  for (let y = 0; y < data.length; y++) {
+    for (let x = 0; x < data[0].length; x++) {
+      if (data[y][x] === '#') {
         activeCubes.set(`${x},${y},0`, true);
       }
     }
   }
-  let height = [0, inputArray.length];
-  let width = [0, inputArray[0].length];
+  let height = [0, data.length];
+  let width = [0, data[0].length];
   let depth = [0, 1];
   for (let t = 0; t < 6; t++) {
     const activeAfterRound = new Map();
@@ -50,17 +53,18 @@ function partOne() {
   return activeCubes.size;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   let activeCubes = new Map();
-  for (let y = 0; y < inputArray.length; y++) {
-    for (let x = 0; x < inputArray[0].length; x++) {
-      if (inputArray[y][x] === '#') {
+  for (let y = 0; y < data.length; y++) {
+    for (let x = 0; x < data[0].length; x++) {
+      if (data[y][x] === '#') {
         activeCubes.set(`${x},${y},0,0`, true);
       }
     }
   }
-  let height = [0, inputArray.length];
-  let width = [0, inputArray[0].length];
+  let height = [0, data.length];
+  let width = [0, data[0].length];
   let depth = [0, 1];
   let hyper = [0, 1];
   for (let t = 0; t < 6; t++) {

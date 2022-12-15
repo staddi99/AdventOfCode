@@ -1,26 +1,29 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split(',');
+const inputArrayTest = inputSample.split(',');
 
-const solve = (n) => {
-  let lastNum = inputArray[inputArray.length - 1];
+const solve = (n, isTest) => {
+  const data = isTest ? inputArrayTest : inputArray;
+  let lastNum = data[data.length - 1];
   const lastSpoken = new Array(n);
-  inputArray.forEach((v, i) => lastSpoken[v] = i + 1);
+  data.forEach((v, i) => (lastSpoken[v] = i + 1));
 
-  for (let i = inputArray.length; i < n; i++) {
+  for (let i = data.length; i < n; i++) {
     const next = lastSpoken[lastNum] ? i - lastSpoken[lastNum] : 0;
     lastSpoken[lastNum] = i;
     lastNum = next;
   }
   return lastNum;
+};
+
+export function partOne(isTest) {
+  return solve(2020, isTest);
 }
 
-function partOne() {
-  return solve(2020);
-}
-
-function partTwo() {
-  return solve(30000000);
+export function partTwo(isTest) {
+  return solve(30000000, isTest);
 }
 
 console.log('Part 1: ' + partOne());

@@ -1,14 +1,17 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
-function partOne() {
-  const binaryLines = inputArray.map((line) => {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  const binaryLines = data.map((line) => {
     return line
-      .replace(/F/g, "0")
-      .replace(/B/g, "1")
-      .replace(/L/g, "0")
-      .replace(/R/g, "1");
+      .replace(/F/g, '0')
+      .replace(/B/g, '1')
+      .replace(/L/g, '0')
+      .replace(/R/g, '1');
   });
 
   binaryLines.sort().reverse();
@@ -19,13 +22,14 @@ function partOne() {
   return row * 8 + column;
 }
 
-function partTwo() {
-  const binaryLines = inputArray.map((line) => {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  const binaryLines = data.map((line) => {
     return line
-      .replace(/F/g, "0")
-      .replace(/B/g, "1")
-      .replace(/L/g, "0")
-      .replace(/R/g, "1");
+      .replace(/F/g, '0')
+      .replace(/B/g, '1')
+      .replace(/L/g, '0')
+      .replace(/R/g, '1');
   });
 
   binaryLines.sort();
@@ -46,5 +50,5 @@ function partTwo() {
   }
 }
 
-console.log("Part 1: " + partOne());
-console.log("Part 2: " + partTwo());
+console.log('Part 1: ' + partOne());
+console.log('Part 2: ' + partTwo());

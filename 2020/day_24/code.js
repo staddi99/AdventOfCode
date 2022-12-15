@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 const directions = ['e', 'se', 'sw', 'w', 'nw', 'ne'];
 
@@ -12,7 +14,6 @@ const offsets = [
   [1, -1],
   [0, -1],
 ];
-const flipped = {};
 
 function move(line) {
   let x = 0;
@@ -32,17 +33,25 @@ function move(line) {
   return [x, y];
 }
 
-inputArray.forEach((line) => {
-  const pos = move(line).join(',');
-  flipped[pos] = !flipped[pos];
-});
-
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  const flipped = {};
+  data.forEach((line) => {
+    const pos = move(line).join(',');
+    flipped[pos] = !flipped[pos];
+  });
   return Object.values(flipped).filter((c) => c).length;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   let i;
+
+  const flipped = {};
+  data.forEach((line) => {
+    const pos = move(line).join(',');
+    flipped[pos] = !flipped[pos];
+  });
 
   function countAdjacents(pos) {
     const adjacents = getAdjacents(pos);
@@ -72,7 +81,7 @@ function partTwo() {
         if (shouldFlip(p)) toFlip.push(p);
       });
     }
-    
+
     toFlip = [...new Set(toFlip)];
     toFlip.forEach((pos) => (flipped[pos] = !flipped[pos]));
   }

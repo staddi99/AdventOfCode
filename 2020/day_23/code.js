@@ -1,6 +1,11 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input
+  .split('\n')[0]
+  .split('')
+  .map((cup) => Number(cup));
+const inputArrayTest = inputSample
   .split('\n')[0]
   .split('')
   .map((cup) => Number(cup));
@@ -98,15 +103,17 @@ function padCups(cups, len) {
   return [...cups, ...[...Array(len + 1).keys()].slice(cups.length + 1)];
 }
 
-function partOne() {
-  const circle = new CupsCircle(inputArray);
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  const circle = new CupsCircle(data);
   circle.playCrabGame(100);
   circle.head = circle.getCupWithLabel(1);
   return Number(circle.toArray().slice(1).join(''));
 }
 
-function partTwo() {
-  const circle = new CupsCircle(padCups(inputArray, 1000000));
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  const circle = new CupsCircle(padCups(data, 1000000));
   circle.playCrabGame(10000000);
   const cupOne = circle.getCupWithLabel(1);
   return cupOne.next.label * cupOne.next.next.label;

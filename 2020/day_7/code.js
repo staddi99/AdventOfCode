@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 function checkBagContainsGold(bags, bag) {
   if (!bags[bag]) {
@@ -28,13 +30,20 @@ function countInnerBags(bags, bag) {
   return innerBags;
 }
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   let res = 0;
   var bags = {};
 
-  for (const line of inputArray) {
+  for (const line of data) {
     let innerBagTypes = line.replace(/.*?bags/, '').split(',');
-    innerBagTypes = innerBagTypes.map(x => x.replace(/.*\d /, '').replace(/[^a-zA-Z ]/g, '').replace(/(bags|bag)/, '').trim());
+    innerBagTypes = innerBagTypes.map((x) =>
+      x
+        .replace(/.*\d /, '')
+        .replace(/[^a-zA-Z ]/g, '')
+        .replace(/(bags|bag)/, '')
+        .trim()
+    );
     bags[line.replace(/bags.*/, '').trim()] = innerBagTypes;
   }
 
@@ -45,17 +54,19 @@ function partOne() {
   return res;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var bags = {};
 
-  for (const line of inputArray) {
+  for (const line of data) {
     let innerBagTypes = line.replace(/.*?bags/, '').split(',');
-    innerBagTypes = innerBagTypes.map(x => [
+    innerBagTypes = innerBagTypes.map((x) => [
       Number(x.replace(/[^\d]+/g, '')),
-      x.replace(/.*\d /, '')
+      x
+        .replace(/.*\d /, '')
         .replace(/[^a-zA-Z ]/g, '')
         .replace(/(bags|bag)/, '')
-        .trim()
+        .trim(),
     ]);
     bags[line.replace(/bags.*/, '').trim()] = innerBagTypes;
   }
@@ -63,5 +74,5 @@ function partTwo() {
   return countInnerBags(bags, 'shiny gold');
 }
 
-console.log("Part 1: " + partOne());
-console.log("Part 2: " + partTwo());
+console.log('Part 1: ' + partOne());
+console.log('Part 2: ' + partTwo());

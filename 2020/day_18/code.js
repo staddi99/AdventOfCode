@@ -1,13 +1,13 @@
-import stringMath from 'string-math';
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 const re = /\([^()]+\)/;
 const re2 = /\d+\s\+\s\d+/;
 
 function calc(l) {
-  // console.log(l);
   const parts = l.split(' ');
   let res = +parts[0];
   for (let i = 1; i < parts.length; i += 2) {
@@ -34,10 +34,11 @@ function calc2(line) {
   return calc(line);
 }
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   let result = 0;
 
-  for (let line of inputArray) {
+  for (let line of data) {
     let m;
     while ((m = re.exec(line))) {
       const parVal = calc(m[0].substr(1, m[0].length - 2));
@@ -51,10 +52,11 @@ function partOne() {
   return result;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   let result = 0;
 
-  for (let line of inputArray) {
+  for (let line of data) {
     let m;
     while ((m = re.exec(line))) {
       const parVal = calc2(m[0].substr(1, m[0].length - 2));

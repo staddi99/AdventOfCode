@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputSample : input;
   class Tile {
     constructor(str) {
       let rows = str.split('\n');
@@ -42,7 +44,7 @@ function partOne() {
     }
   }
 
-  const tiles = input.split(/\r?\n\r?\n/).map((r) => new Tile(r));
+  const tiles = data.split(/\r?\n\r?\n/).map((r) => new Tile(r));
 
   let product = 1;
 
@@ -66,7 +68,8 @@ function partOne() {
   return product;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputSample : input;
   class Tile2 {
     constructor(str) {
       let rows = str.split('\n');
@@ -160,7 +163,7 @@ function partTwo() {
 
   const monster = [[18], [0, 5, 6, 11, 12, 17, 18, 19], [1, 4, 7, 10, 13, 16]];
 
-  let tiles = input.split(/\r?\n\r?\n/).map((r) => new Tile2(r));
+  let tiles = data.split(/\r?\n\r?\n/).map((r) => new Tile2(r));
 
   let queue = [tiles[0]];
   let visited = new Set();

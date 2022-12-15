@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 function countChars(str, char) {
   let count = 0;
@@ -12,10 +14,11 @@ function countChars(str, char) {
   return count;
 }
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   let res = 0;
 
-  inputArray.forEach((test) => {
+  data.forEach((test) => {
     const [policy, password] = test.split(':');
     const [minMax, letter] = policy.split(' ');
     const [min, max] = minMax.split('-').map(Number);
@@ -28,10 +31,11 @@ function partOne() {
   return res;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   let res = 0;
 
-  inputArray.forEach((test) => {
+  data.forEach((test) => {
     const [policy, password] = test.split(':');
     const [positions, letter] = policy.split(' ');
     const [firstIndex, secondIndex] = positions.split('-').map(Number);
@@ -47,5 +51,5 @@ function partTwo() {
   return res;
 }
 
-console.log("Part 1: " + partOne());
-console.log("Part 2: " + partTwo());
+console.log('Part 1: ' + partOne());
+console.log('Part 2: ' + partTwo());

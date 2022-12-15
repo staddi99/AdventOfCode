@@ -1,11 +1,14 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
-const inputArray = input.split('\n');
+const inputArray = input.split('\n\n');
+const inputArrayTest = inputSample.split('\n\n');
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   let output = 0;
 
-  const [rules, messages] = input.split('\n\n').map((part) => part.split('\n'));
+  const [rules, messages] = data.map((part) => part.split('\n'));
 
   const getRule = (id) => {
     const rule = rules.find((r) => r.startsWith(`${id}:`));
@@ -34,11 +37,12 @@ function partOne() {
   return output;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   let output = 0;
   const MAX_DEPTH = 5;
 
-  const [rules, messages] = input.split('\n\n').map((part) => part.split('\n'));
+  const [rules, messages] = data.map((part) => part.split('\n'));
 
   rules[rules.findIndex((r) => r.startsWith('8:'))] = '8: 42 | 42 8';
   rules[rules.findIndex((r) => r.startsWith('11:'))] = '11: 42 31 | 42 11 31';

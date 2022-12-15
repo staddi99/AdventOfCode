@@ -1,6 +1,8 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 const ADDRESS_LENGTH = 36;
 
@@ -14,7 +16,8 @@ const parse = (line) => {
   }
 };
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   const applyMask = (n, mask) => {
     const binary = [...n.toString(2).padStart(ADDRESS_LENGTH, '0')];
     for (let i = 0; i < ADDRESS_LENGTH; i++) {
@@ -28,7 +31,7 @@ function partOne() {
 
   const memory = new Map();
   let mask = 'X'.repeat(ADDRESS_LENGTH);
-  for (const parsed of inputArray.map(parse)) {
+  for (const parsed of data.map(parse)) {
     if (typeof parsed === 'string') {
       mask = parsed;
     } else {
@@ -38,7 +41,8 @@ function partOne() {
   return [...memory.values()].reduce((a, b) => a + b);
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   const applyMask = (n, mask) => {
     const result = [[...n.toString(2).padStart(ADDRESS_LENGTH, '0')]];
     for (let i = 0; i < ADDRESS_LENGTH; i++) {
@@ -64,7 +68,7 @@ function partTwo() {
   const memory = new Map();
 
   let mask = '0'.repeat(36);
-  for (const parsed of inputArray.map(parse)) {
+  for (const parsed of data.map(parse)) {
     if (typeof parsed === 'string') {
       mask = parsed;
     } else {
