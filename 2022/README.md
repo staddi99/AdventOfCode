@@ -29,7 +29,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 15: Beacon Exclusion Zone](day_15/)
 *  [✅ Day 16: Proboscidea Volcanium](day_16/)
 *  [✅ Day 17: Pyroclastic Flow](day_17/)
-*  [❔ Day 18: TBD]()
+*  [✅ Day 18: Boiling Boulders](day_18/)
 *  [❔ Day 19: TBD]()
 *  [❔ Day 20: TBD]()
 *  [❔ Day 21: TBD]()
