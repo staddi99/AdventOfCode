@@ -31,7 +31,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 17: Pyroclastic Flow](day_17/)
 *  [✅ Day 18: Boiling Boulders](day_18/)
 *  [✅ Day 19: Not Enough Minerals](day_19/)
-*  [❔ Day 20: TBD]()
+*  [✅ Day 20: Grove Positioning System](day_20/)
 *  [❔ Day 21: TBD]()
 *  [❔ Day 22: TBD]()
 *  [❔ Day 23: TBD]()
