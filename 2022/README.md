@@ -33,7 +33,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 19: Not Enough Minerals](day_19/)
 *  [✅ Day 20: Grove Positioning System](day_20/)
 *  [✅ Day 21: Monkey Math](day_21/)
-*  [❔ Day 22: TBD]()
+*  [✅ Day 22: Monkey Map](day_22/)
 *  [❔ Day 23: TBD]()
 *  [❔ Day 24: TBD]()
 *  [❔ Day 25: TBD]()
