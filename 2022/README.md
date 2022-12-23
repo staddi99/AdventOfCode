@@ -34,7 +34,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 20: Grove Positioning System](day_20/)
 *  [✅ Day 21: Monkey Math](day_21/)
 *  [✅ Day 22: Monkey Map](day_22/)
-*  [❔ Day 23: TBD]()
+*  [✅ Day 23: Unstable Diffusion](day_23/)
 *  [❔ Day 24: TBD]()
 *  [❔ Day 25: TBD]()
 
