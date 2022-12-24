@@ -35,7 +35,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 21: Monkey Math](day_21/)
 *  [✅ Day 22: Monkey Map](day_22/)
 *  [✅ Day 23: Unstable Diffusion](day_23/)
-*  [❔ Day 24: TBD]()
+*  [✅ Day 24: Blizzard Basin](day_24/)
 *  [❔ Day 25: TBD]()
 
 ## Previous Years
