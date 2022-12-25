@@ -475,4 +475,4 @@ export function partOne() {
   return Number(res.value);
 }
 
-console.log('Part 1: ' + partOne());
+// console.log('Part 1: ' + partOne());

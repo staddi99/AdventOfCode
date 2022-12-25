@@ -224,5 +224,5 @@ export function partTwo(isTest) {
   return currentSeatStates.flat().filter((x) => x === '#').length;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

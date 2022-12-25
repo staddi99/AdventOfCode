@@ -372,5 +372,5 @@ export function partTwo() {
   }
 }
 
-console.log('Part 1: ' + partOne().y);
-console.log('Part 2: ' + partTwo().y);
+// console.log('Part 1: ' + partOne().y);
+// console.log('Part 2: ' + partTwo().y);

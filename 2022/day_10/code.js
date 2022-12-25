@@ -56,5 +56,5 @@ export function partTwo(isTest) {
   return crt.map((line) => line.join('')).join('\n');
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: \n' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: \n' + partTwo());

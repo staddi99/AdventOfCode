@@ -74,5 +74,5 @@ export function partTwo(isTest) {
   return countInnerBags(bags, 'shiny gold');
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

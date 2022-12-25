@@ -174,5 +174,5 @@ export function partTwo(isTest) {
   return 1000 * (y + 1) + 4 * (x + 1) + facing[dy][dx];
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

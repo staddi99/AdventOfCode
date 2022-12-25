@@ -69,5 +69,5 @@ export function partTwo(isTest) {
   return sum(run(isTest).map((n) => Number(n.join(''))));
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

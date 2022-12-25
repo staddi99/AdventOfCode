@@ -51,5 +51,5 @@ export function partTwo(isTest) {
   return pos[0] * pos[1];
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

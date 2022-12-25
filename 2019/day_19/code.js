@@ -434,5 +434,5 @@ export function partTwo() {
   return found_top_left.x * 10000 + found_top_left.y;
 }
 
-console.log('Part 1: ' + partOne(true));
-console.log('Part 2: ' + partTwo(true));
+// console.log('Part 1: ' + partOne(true));
+// console.log('Part 2: ' + partTwo(true));

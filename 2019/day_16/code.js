@@ -60,5 +60,5 @@ export function partTwo(isTest) {
   return Number(slice_to_iterate.slice(0, 8).join(''));
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

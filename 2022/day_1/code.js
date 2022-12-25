@@ -32,5 +32,5 @@ export function partTwo(isTest) {
   return res[0] + res[1] + res[2];
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

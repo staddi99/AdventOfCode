@@ -119,5 +119,5 @@ export function partTwo(isTest) {
   return cupOne.next.label * cupOne.next.next.label;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

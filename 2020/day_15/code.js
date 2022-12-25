@@ -26,5 +26,5 @@ export function partTwo(isTest) {
   return solve(30000000, isTest);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

@@ -70,5 +70,5 @@ export function partTwo(isTest) {
   return Math.max(...wins);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

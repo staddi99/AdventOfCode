@@ -15,4 +15,4 @@ export function partOne(isTest) {
   return key;
 }
 
-console.log('Part 1: ' + partOne());
+// console.log('Part 1: ' + partOne());
