@@ -82,6 +82,7 @@ class Formula {
 }
 
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const parseLines = (raw_lines) => {
   const formula = {};
@@ -110,18 +111,21 @@ const parseLines = (raw_lines) => {
 };
 
 const inputArray = parseLines(input);
+const inputArrayTest = parseLines(inputSample);
 
-function partOne() {
-  let formula = new Formula(inputArray);
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let formula = new Formula(data);
   let { ore } = formula.calculateOreTo('FUEL', 1);
   return ore;
 }
 
-function partTwo() {
-  let formula = new Formula(inputArray);
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let formula = new Formula(data);
   let fuel = formula.calculateMaxFuelGivenOre();
   return fuel;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

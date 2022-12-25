@@ -263,7 +263,7 @@ import input from './input.js';
 
 const inputArray = input.split(',').map((e) => parseInt(e));
 
-function partOne() {
+export function partOne() {
   const instrs = [
     'NOT T T',
     'AND A T',
@@ -296,7 +296,7 @@ function partOne() {
   return outputs[outputs.length - 1];
 }
 
-function partTwo() {
+export function partTwo() {
   const instrs = [
     'NOT T T',
     'AND A T',

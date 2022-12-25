@@ -378,7 +378,7 @@ import input from './input.js';
 
 const inputArray = input.split(',').map((e) => parseInt(e));
 
-function partOne() {
+export function partOne() {
   let tractor_beam = new TractorBeam(inputArray);
   for (let x = 0; x < 50; x++) {
     for (let y = 0; y < 50; y++) {
@@ -391,7 +391,7 @@ function partOne() {
   return tractor_beam.grid.sum();
 }
 
-function partTwo() {
+export function partTwo() {
   let tractor_beam = new TractorBeam(inputArray);
   tractor_beam.grid.set(0, 0, 1);
   let square_size = 100;
@@ -434,5 +434,5 @@ function partTwo() {
   return found_top_left.x * 10000 + found_top_left.y;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+console.log('Part 1: ' + partOne(true));
+console.log('Part 2: ' + partTwo(true));

@@ -344,16 +344,16 @@ import input from './input.js';
 
 const inputArray = input.split(',').map((e) => parseInt(e));
 
-function partOne() {
+export function partOne() {
   let ship = new Ship(inputArray);
   return ship.run();
 }
 
-function partTwo() {
+export function partTwo() {
   let ship = new Ship(inputArray, 1);
   ship.run();
   return ship.printShip();
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

@@ -1,8 +1,10 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 import lodash from 'lodash';
 const { intersection } = lodash;
 
 const inputArray = input.split('\n').map((orbit) => orbit.split(')'));
+const inputArrayTest = inputSample.split('\n').map((orbit) => orbit.split(')'));
 
 class Planet {
   constructor(name) {
@@ -52,13 +54,17 @@ class OrbitMap {
 
 let orbit_map = new OrbitMap(inputArray);
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let orbit_map = new OrbitMap(data);
   return Object.values(orbit_map.planets)
     .map((p) => p.count())
     .reduce((a, b) => a + b);
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let orbit_map = new OrbitMap(data);
   const p1_to_com = orbit_map.planets['YOU'].listToCom();
   const p2_to_com = orbit_map.planets['SAN'].listToCom();
 
@@ -73,5 +79,5 @@ function partTwo() {
   );
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

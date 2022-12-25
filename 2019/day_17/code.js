@@ -335,7 +335,7 @@ import input from './input.js';
 
 const inputArray = input.split(',').map((e) => parseInt(e));
 
-function partOne() {
+export function partOne() {
   const g = run([...inputArray]);
   let outputs = [];
 
@@ -359,12 +359,10 @@ function partOne() {
     return sum;
   }, 0);
 
-  //printRoutine(lines);
-
   return result;
 }
 
-function partTwo() {
+export function partTwo() {
   const A = 'R,6,L,10,R,10,R,10';
   const B = 'L,10,L,12,R,10';
   const C = 'R,6,L,12,L,10';
@@ -394,5 +392,5 @@ function partTwo() {
   return outputs[total - 1];
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

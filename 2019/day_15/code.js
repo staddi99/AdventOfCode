@@ -333,17 +333,17 @@ import input from './input.js';
 
 const inputArray = input.split(',').map((e) => parseInt(e));
 
-function partOne() {
+export function partOne() {
   const [oxygen, map] = drawMap(inputArray);
   const path = searchPath(map, Tuple.pair(0, 0), oxygen);
   return path.length;
 }
 
-function partTwo() {
+export function partTwo() {
   const [oxygen, map] = drawMap(inputArray);
   const oxygenPath = breadthFirstSearch(map.graph, oxygen);
   return longestPath(oxygenPath).length - 1;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

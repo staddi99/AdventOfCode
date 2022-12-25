@@ -101,16 +101,24 @@ class Moons {
 }
 
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const strsToInts = (...nums) => nums.map((n) => parseInt(n, 10));
+
 const inputArray = input.split('\n').map((line) => {
   let [, x, y, z] = /^\<x=(-?\d+), y=(-?\d+), z=(-?\d+)\>$/.exec(line);
   [x, y, z] = strsToInts(x, y, z);
   return [x, y, z];
 });
+const inputArrayTest = inputSample.split('\n').map((line) => {
+  let [, x, y, z] = /^\<x=(-?\d+), y=(-?\d+), z=(-?\d+)\>$/.exec(line);
+  [x, y, z] = strsToInts(x, y, z);
+  return [x, y, z];
+});
 
-function partOne() {
-  let system = new Moons(inputArray);
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let system = new Moons(data);
 
   do {
     system.applyGravity();
@@ -121,8 +129,9 @@ function partOne() {
   return system.getTotalEnergy();
 }
 
-function partTwo() {
-  let system = new Moons(inputArray);
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let system = new Moons(data);
 
   for (let dimension of ['x', 'y', 'z']) {
     let at_start = false;
@@ -138,5 +147,5 @@ function partTwo() {
   return lcm(...Object.values(system.time_dimensions));
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

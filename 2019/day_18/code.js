@@ -388,18 +388,19 @@ class Maze {
 }
 
 import input from './input.js';
+import { inputSample1, inputSample2 } from './inputSample.js';
 
-const inputArray = input;
-
-function partOne() {
-  let maze = new Maze(input);
+export function partOne(isTest) {
+  const data = isTest ? inputSample1 : input;
+  let maze = new Maze(data);
 
   const paths = maze.getShortestPath();
   return paths[0].steps;
 }
 
-function partTwo() {
-  let maze = new Maze(input, false);
+export function partTwo(isTest) {
+  const data = isTest ? inputSample2 : input;
+  let maze = new Maze(data, false);
   maze.setupPartTwo();
   maze.pathfinders = maze.generatePathfinders();
 
@@ -407,5 +408,5 @@ function partTwo() {
   return paths[0].steps;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+console.log('Part 2: ' + partTwo(true));

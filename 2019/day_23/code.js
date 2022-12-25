@@ -312,7 +312,7 @@ import input from './input.js';
 
 const inputArray = input.split(',').map((e) => parseInt(e));
 
-function partOne() {
+export function partOne() {
   let network = new Network(inputArray);
   let break_on_address = 255;
   while (true) {
@@ -332,7 +332,7 @@ function partOne() {
   }
 }
 
-function partTwo() {
+export function partTwo() {
   let network = new Network(inputArray);
   let nat_address = 255;
   let nat_packet;

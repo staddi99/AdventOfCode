@@ -430,15 +430,16 @@ class Arcade {
 import input from './input.js';
 
 const inputArray = input.split(',').map((e) => parseInt(e));
+
 const TYPES = { EMPTY, WALL, BLOCK, PADDLE, BALL };
 
-function partOne() {
+export function partOne() {
   let arcade = new Arcade(inputArray);
   let grid = arcade.runAndGetGrid();
   return grid.getNumberOfTilesOfType(TYPES.BLOCK);
 }
 
-function partTwo() {
+export function partTwo() {
   inputArray[0] = 2;
   let arcade = new Arcade(inputArray, {
     print_game: false,
@@ -448,5 +449,5 @@ function partTwo() {
   return arcade.freePlay();
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());
