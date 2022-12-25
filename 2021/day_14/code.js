@@ -88,5 +88,5 @@ export function partTwo(isTest) {
   return mostLeastAfter(polymerPairs, substitutions, 40);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

@@ -30,7 +30,7 @@ function all_matches_are_not_a_part_of_larger_group(str) {
   });
 }
 
-function partOne() {
+export function partOne() {
   let count = 0;
   for (let n = inputArray[0]; n <= inputArray[1]; n++) {
     let n_str = String(n);
@@ -46,7 +46,7 @@ function partOne() {
   return count;
 }
 
-function partTwo() {
+export function partTwo() {
   let count = 0;
   for (let n = inputArray[0]; n <= inputArray[1]; n++) {
     let n_str = String(n);
@@ -66,5 +66,5 @@ function partTwo() {
   return count;
 }
 
-console.log("Part 1: " + partOne());
-console.log("Part 2: " + partTwo());
+// console.log("Part 1: " + partOne());
+// console.log("Part 2: " + partTwo());

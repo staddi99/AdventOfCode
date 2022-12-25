@@ -119,14 +119,21 @@ class Grid {
 }
 
 import input from './input.js';
+import { inputSample1, inputSample2 } from './inputSample.js';
 
 const inputArray = input
   .split('\n')
   .map((row) => row.split('').map((v) => (v === '#' ? 1 : 0)));
+const inputArrayTest1 = inputSample1
+  .split('\n')
+  .map((row) => row.split('').map((v) => (v === '#' ? 1 : 0)));
+const inputArrayTest2 = inputSample2
+  .split('\n')
+  .map((row) => row.split('').map((v) => (v === '#' ? 1 : 0)));
 
-let grid = new Grid(inputArray);
-
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest1 : inputArray;
+  let grid = new Grid(data);
   let best_count = -1;
   let best_coords = null;
   for (let asteroid of grid.asteroids) {
@@ -144,7 +151,9 @@ function partOne() {
   return [best_count, best_coords];
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest2 : inputArray;
+  let grid = new Grid(data);
   let start_from = partOne()[1];
 
   let total_vaporized = 0;
@@ -170,5 +179,5 @@ function partTwo() {
   } while (total_vaporized < 200);
 }
 
-console.log('Part 1: ' + partOne()[0]);
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne()[0]);
+// console.log('Part 2: ' + partTwo());

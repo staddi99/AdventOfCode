@@ -46,4 +46,4 @@ export function partOne(isTest) {
   return step;
 }
 
-console.log('Part 1: ' + partOne());
+// console.log('Part 1: ' + partOne());

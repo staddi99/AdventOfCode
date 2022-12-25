@@ -30,5 +30,5 @@ export function partTwo(isTest) {
   return countAfter(data, 256);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

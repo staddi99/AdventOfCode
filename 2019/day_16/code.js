@@ -1,10 +1,14 @@
 import input from './input.js';
+import { inputSample1, inputSample2 } from './inputSample.js';
 
 const inputArray = input.split('').map((v) => +v);
+const inputArrayTest1 = inputSample1.split('').map((v) => +v);
+const inputArrayTest2 = inputSample2.split('').map((v) => +v);
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest1 : inputArray;
   const base_pattern = [0, 1, 0, -1];
-  let current = inputArray;
+  let current = data;
 
   for (let phase = 1; phase <= 100; phase++) {
     let new_arr = [];
@@ -35,13 +39,14 @@ function partOne() {
     current = new_arr;
   }
 
-  return current.slice(0, 8).join('');
+  return Number(current.slice(0, 8).join(''));
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest2 : inputArray;
   const partTwoInput = [];
   for (let i = 0; i < 10000; i++) {
-    partTwoInput.push(...inputArray);
+    partTwoInput.push(...data);
   }
   const offset = parseInt(partTwoInput.slice(0, 7).join(''), 10);
   const slice_to_iterate = partTwoInput.slice(offset);
@@ -52,8 +57,8 @@ function partTwo() {
     }
   }
 
-  return slice_to_iterate.slice(0, 8).join('');
+  return Number(slice_to_iterate.slice(0, 8).join(''));
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

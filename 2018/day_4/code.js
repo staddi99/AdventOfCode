@@ -1,4 +1,5 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const obj = ['String'].reduce(
   (obj, name) => {
@@ -36,13 +37,14 @@ const sortBy =
     return 0;
   };
 
-const parseInput = () => {
+const parseInput = (isTest) => {
+  const data = isTest ? inputSample : input;
   const guards = {};
 
   let lastId;
   let lastTime;
 
-  input
+  data
     .split('\n')
     .map((str) => {
       const [time, cmd] = str.match(/^\[(.*)\] (.*)/).slice(1);
@@ -110,10 +112,9 @@ const getMinuteFrequency = (guard) => {
   return minutes;
 };
 
-const inputArray = parseInput();
-
-function partOne() {
-  const guard = inputArray.reduce(maxBy((guard) => guard.totalSleep));
+export function partOne(isTest) {
+  const data = parseInput(isTest);
+  const guard = data.reduce(maxBy((guard) => guard.totalSleep));
 
   const minutes = getMinuteFrequency(guard);
 
@@ -124,8 +125,9 @@ function partOne() {
   return guard.id * mostSleptMinute;
 }
 
-function partTwo() {
-  const frequencies = inputArray.map((guard) => {
+export function partTwo(isTest) {
+  const data = parseInput(isTest);
+  const frequencies = data.map((guard) => {
     const minutes = getMinuteFrequency(guard);
     return {
       id: guard.id,
@@ -135,9 +137,11 @@ function partTwo() {
         .reduce(maxBy((minute) => minute.value)),
     };
   });
-  const { id, maxFrequency } = frequencies.reduce(maxBy((freq) => freq.maxFrequency.minute));
+  const { id, maxFrequency } = frequencies.reduce(
+    maxBy((freq) => freq.maxFrequency.minute)
+  );
   return id * maxFrequency.minute;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

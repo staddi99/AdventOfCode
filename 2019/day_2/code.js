@@ -1,9 +1,12 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split(',');
+const inputArrayTest = inputSample.split(',');
 
-function compute(noun, verb) {
-  let array = [...inputArray];
+function compute(noun, verb, isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let array = [...data];
   array[1] = noun;
   array[2] = verb;
   for (var i = 0; i < array.length; i = i + 4) {
@@ -17,18 +20,18 @@ function compute(noun, verb) {
   return array[0];
 }
 
-function partOne() {
-  return compute(12, 2);
+export function partOne(isTest) {
+  return compute(12, 2, isTest);
 }
 
-function partTwo() {
+export function partTwo(isTest) {
   let nums = Array(100)
     .fill(0)
     .map((c, i) => i);
 
   for (let noun of nums) {
     for (let verb of nums) {
-      let position_zero = compute(noun, verb);
+      let position_zero = compute(noun, verb, isTest);
 
       if (position_zero === 19690720) {
         return 100 * noun + verb;
@@ -37,5 +40,5 @@ function partTwo() {
   }
 }
 
-console.log("Part 1: " + partOne());
-console.log("Part 2: " + partTwo());
+// console.log("Part 1: " + partOne());
+// console.log("Part 2: " + partTwo());

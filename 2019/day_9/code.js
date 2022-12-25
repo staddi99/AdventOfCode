@@ -272,15 +272,15 @@ import input from './input.js';
 
 const inputArray = input.split(',').map((e) => parseInt(e));
 
-function partOne() {
+export function partOne() {
   let computer = new Computer(inputArray, [1]);
-  return computer.run();
+  return computer.run()[0];
 }
 
-function partTwo() {
+export function partTwo() {
   let computer = new Computer(inputArray, [2]);
-  return computer.run();
+  return computer.run()[0];
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

@@ -93,5 +93,5 @@ export function partTwo(isTest) {
   return Object.values(flipped).filter((c) => c).length;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

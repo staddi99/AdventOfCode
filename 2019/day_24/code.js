@@ -67,11 +67,14 @@ function isBug(dots, i, j, skipCenter) {
 }
 
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
-function partOne() {
-  let dots = inputArray;
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let dots = data;
   dots.hash = 0;
   for (let i = 0; i < dots.length; i++) {
     for (let j = 0; j < dots[i].length; j++) {
@@ -91,8 +94,9 @@ function partOne() {
   return dots.hash;
 }
 
-function partTwo() {
-  let dots = inputArray;
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
+  let dots = data;
   dots.hash = 0;
   for (let i = 0; i < dots.length; i++) {
     for (let j = 0; j < dots[i].length; j++) {
@@ -107,7 +111,7 @@ function partTwo() {
     .map((r) => Array(dots[0].length).fill('.'));
 
   let ds = [dots];
-  let x = 200;
+  let x = isTest ? 10 : 200;
   while (x--) {
     ds.unshift(empty);
     ds.push(empty);
@@ -129,5 +133,5 @@ function partTwo() {
   return result;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

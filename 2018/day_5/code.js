@@ -1,4 +1,5 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const obj = ['String'].reduce(
   (obj, name) => {
@@ -45,17 +46,19 @@ const runRegex = (input) => {
   return input;
 };
 
-function partOne() {
-  return runRegex(input).length;
+export function partOne(isTest) {
+  const data = isTest ? inputSample : input;
+  return runRegex(data).length;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputSample : input;
   const lengths = [];
   for (const char of range('A', 'Z')) {
-    lengths.push(runRegex(input.replace(new RegExp(char, 'ig'), '')).length);
+    lengths.push(runRegex(data.replace(new RegExp(char, 'ig'), '')).length);
   }
   return Math.min(...lengths);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

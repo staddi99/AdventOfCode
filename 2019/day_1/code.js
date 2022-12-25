@@ -1,16 +1,19 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('\n');
+const inputArrayTest = inputSample.split('\n');
 
 function calculateFuel(mass) {
   if(mass <= 6) return 0;
   return calculateFuel(Math.floor(parseInt(mass) / 3) - 2) + (Math.floor(parseInt(mass) / 3) - 2);
 }
 
-function partOne() {
+export function partOne(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var res = 0;
   
-  inputArray.forEach(
+  data.forEach(
     element => {
       res += Math.floor(parseInt(element) / 3) - 2;
     }
@@ -19,10 +22,11 @@ function partOne() {
   return res;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const data = isTest ? inputArrayTest : inputArray;
   var res = 0;
 
-  inputArray.forEach(
+  data.forEach(
     element => {
       res += calculateFuel(element);
     }
@@ -31,5 +35,5 @@ function partTwo() {
   return res;
 }
 
-console.log("Part 1: " + partOne());
-console.log("Part 2: " + partTwo());
+// console.log("Part 1: " + partOne());
+// console.log("Part 2: " + partTwo());

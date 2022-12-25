@@ -206,13 +206,13 @@ for (let k in distance) {
 }
 const ks = Object.keys(table);
 
-function partOne() {
+export function partOne() {
   return bfsWithNode({ k: 'o-AA' }, table, distance, ns, 0);
 }
 
-function partTwo() {
+export function partTwo() {
   return bfsWithNode({ k: 'o-AA' }, table, distance, ns, 1);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

@@ -262,7 +262,7 @@ const OPPOSITES = {
   west: 'east',
 };
 
-function partOne() {
+export function partOne() {
   const runPartOne = function* () {
     let input;
     let value, done;
@@ -472,12 +472,7 @@ function partOne() {
     res = program.next();
   }
 
-  return res.value;
+  return Number(res.value);
 }
 
-function partTwo() {
-  return 'Advent of Code 2019 Complete!';
-}
-
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());

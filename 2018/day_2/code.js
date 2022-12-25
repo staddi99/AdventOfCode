@@ -2,7 +2,7 @@ import input from './input.js';
 
 const inputArray = input.split('\n');
 
-function partOne() {
+export function partOne() {
   const count = {};
   inputArray
     .map((r) => r.split(''))
@@ -27,7 +27,7 @@ function partOne() {
   return count[0] * count[1];
 }
 
-function partTwo() {
+export function partTwo() {
   const differences = (str1, str2) => {
     if (str1.length !== str2.length) return -1;
     let count = 0;
@@ -50,5 +50,5 @@ function partTwo() {
   return output;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

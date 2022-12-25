@@ -60,5 +60,5 @@ export function partTwo(isTest) {
   return Math.max(...numList) + Math.min(...numList);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

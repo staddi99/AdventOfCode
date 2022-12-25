@@ -74,5 +74,5 @@ export function partTwo(isTest) {
   return Number(nerdamer.solveEquations(left + ' = ' + right, 'X').toString());
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

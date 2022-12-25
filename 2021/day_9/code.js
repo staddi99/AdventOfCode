@@ -69,5 +69,5 @@ export function partTwo(isTest) {
   return sorted.slice(0, 3).reduce((a, b) => a * b, 1);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

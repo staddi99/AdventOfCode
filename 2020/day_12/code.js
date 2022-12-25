@@ -96,5 +96,5 @@ export function partTwo(isTest) {
   return Math.abs(ship.north) + Math.abs(ship.east);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

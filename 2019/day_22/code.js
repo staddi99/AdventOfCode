@@ -44,7 +44,7 @@ function inv(n, length) {
   return mod(n, length - 2, length);
 }
 
-function partOne() {
+export function partOne() {
   let deck = [];
   for (let i = 0; i < 10007; i++) {
     deck[i] = i;
@@ -73,7 +73,7 @@ function partOne() {
   return deck.indexOf(2019);
 }
 
-function partTwo() {
+export function partTwo() {
   const length = 119315717514047;
   const times = 101741582076661;
 
@@ -102,5 +102,5 @@ function partTwo() {
   return ret;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

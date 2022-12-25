@@ -1,17 +1,23 @@
 import input from './input.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input.split('').map((e) => parseInt(e));
+const inputArrayTest = inputSample.split('').map((e) => parseInt(e));
 const width = 25;
 const height = 6;
 
+const run = (isTest) => {
+  const data = isTest ? inputArrayTest : inputArray;
+  let layers = [];
+  const size = width * height;
+  for (let i = 0; i < data.length / size; i++) {
+    layers.push(data.slice(i * size, (i + 1) * size));
+  }
+  return layers;
+};
 
-let layers = [];
-const size = width * height;
-for (let i = 0; i < inputArray.length / size; i++) {
-  layers.push(inputArray.slice(i * size, (i + 1) * size));
-}
-
-function partOne() {
+export function partOne(isTest) {
+  const layers = run(isTest);
   let layers_count = [];
   for (let layer of layers) {
     let layer_count = layer.reduce((obj, num) => {
@@ -39,7 +45,8 @@ function partOne() {
   return ones_times_twos;
 }
 
-function partTwo() {
+export function partTwo(isTest) {
+  const layers = run(isTest);
   let image = layers[0];
   for (let i = 1; i < layers.length; i++) {
     let layer = layers[i];
@@ -60,9 +67,9 @@ function partTwo() {
       let pixel = image[x + y * width];
       line += pixel === 0 ? ' ' : '#';
     }
-    console.log(line);
+    // console.log(line);
   }
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());
