@@ -178,9 +178,7 @@ class Computer {
       let mode = modes[i];
       let value = this.memory[this.pointer + i];
 
-      if (value === undefined) {
-        value = 0;
-      }
+      value = value === undefined ? 0 : value;
 
       if (mode !== IMMEDIATE_MODE) {
         const can_switch_to_position = !write || i < modes.length - 1;
@@ -196,9 +194,7 @@ class Computer {
         }
       }
 
-      if (value === undefined) {
-        value = 0;
-      }
+      value = value === undefined ? 0 : value;
 
       values.push(value);
     }
@@ -212,59 +208,6 @@ class Computer {
 
   output(v) {
     this.outputs.push(v);
-  }
-
-  get _() {
-    return this.memory.slice(Math.max(0, this.pointer - 1), this.pointer + 8);
-  }
-}
-
-class Circuit {
-  constructor(memory, phase_settings, circuit_size = 5) {
-    this.memory = memory;
-    this.phase_settings = phase_settings;
-    this.circuit = Array(circuit_size)
-      .fill()
-      .map((c, i) => {
-        let phase_setting = [phase_settings[i]];
-        if (i === 0) {
-          phase_setting.push(0);
-        }
-
-        return new Computer(memory, phase_setting, i);
-      });
-
-    this.current_computer = 0;
-  }
-
-  run() {
-    let computer = this.circuit[this.current_computer];
-    let output, last_output;
-
-    while (!computer.halted) {
-      let new_output = computer.run();
-      if (computer.halted) {
-        break;
-      }
-
-      output = new_output;
-
-      let next_computer = this.moveToNextComputer();
-
-      last_output = output.shift();
-      next_computer.inputs.push(last_output);
-
-      computer = next_computer;
-    }
-
-    return last_output;
-  }
-
-  moveToNextComputer() {
-    this.current_computer++;
-    this.current_computer %= this.circuit.length;
-
-    return this.circuit[this.current_computer];
   }
 }
 

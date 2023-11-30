@@ -106,7 +106,7 @@ class Grid {
     );
   }
 
-  sumAllAsteroids() {
+  /* sumAllAsteroids() {
     let sum = 0;
     for (let y = 0; y < this.grid.length; y++) {
       for (let x = 0; x < this.grid[y].length; x++) {
@@ -115,24 +115,21 @@ class Grid {
     }
 
     return sum;
-  }
+  } */
 }
 
 import input from './input.js';
-import { inputSample1, inputSample2 } from './inputSample.js';
+import inputSample from './inputSample.js';
 
 const inputArray = input
   .split('\n')
   .map((row) => row.split('').map((v) => (v === '#' ? 1 : 0)));
-const inputArrayTest1 = inputSample1
-  .split('\n')
-  .map((row) => row.split('').map((v) => (v === '#' ? 1 : 0)));
-const inputArrayTest2 = inputSample2
+const inputArrayTest = inputSample
   .split('\n')
   .map((row) => row.split('').map((v) => (v === '#' ? 1 : 0)));
 
 export function partOne(isTest) {
-  const data = isTest ? inputArrayTest1 : inputArray;
+  const data = isTest ? inputArrayTest : inputArray;
   let grid = new Grid(data);
   let best_count = -1;
   let best_coords = null;
@@ -152,9 +149,9 @@ export function partOne(isTest) {
 }
 
 export function partTwo(isTest) {
-  const data = isTest ? inputArrayTest2 : inputArray;
+  const data = isTest ? inputArrayTest : inputArray;
   let grid = new Grid(data);
-  let start_from = partOne()[1];
+  let start_from = partOne(isTest)[1];
 
   let total_vaporized = 0;
   let vaporized = [];

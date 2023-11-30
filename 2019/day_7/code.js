@@ -216,13 +216,13 @@ class Circuit {
 
 import G from 'generatorics';
 import input from './input.js';
-import inputSample from './inputSample.js';
+import { inputSample1, inputSample2 } from './inputSample.js';
 
 const inputArray = input.split(',').map((e) => parseInt(e));
-const inputArrayTest = inputSample.split(',').map((e) => parseInt(e));
+const inputArrayTest1 = inputSample1.split(',').map((e) => parseInt(e));
+const inputArrayTest2 = inputSample2.split(',').map((e) => parseInt(e));
 
-function run(settings, isTest) {
-  const data = isTest ? inputArrayTest : inputArray;
+function run(settings, data) {
   let max_output = Number.MIN_SAFE_INTEGER;
   for (var phase_settings of G.permutation(settings)) {
     let circuit = new Circuit(data, phase_settings);
@@ -235,11 +235,13 @@ function run(settings, isTest) {
 }
 
 export function partOne(isTest) {
-  return run([0, 1, 2, 3, 4]);
+  const data = isTest ? inputArrayTest1 : inputArray;
+  return run([0, 1, 2, 3, 4], data);
 }
 
 export function partTwo(isTest) {
-  return run([9, 8, 7, 6, 5]);
+  const data = isTest ? inputArrayTest2 : inputArray;
+  return run([9, 8, 7, 6, 5], data);
 }
 
 // console.log('Part 1: ' + partOne());

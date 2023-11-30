@@ -28,8 +28,6 @@ function* run(numbers) {
     } else if (isNumber) {
       if (isOutput) return value.join('');
 
-      if (value.length > 15)
-        throw new Error('can not convert big number to number');
       return Number(value.join(''));
     } else {
       return value;
@@ -38,9 +36,6 @@ function* run(numbers) {
   function write(mode, pos, value) {
     const position = getPosition(mode, pos);
     (position < numbers.length ? numbers : mem)[position] = value;
-
-    if (Array.isArray(value) && value[0] !== '-' && isNaN(value[0]))
-      throw value;
   }
 
   const instrs = {
@@ -55,7 +50,7 @@ function* run(numbers) {
     9: ['change-base', 1],
     99: ['halt', 0],
   };
-  function printRead(mode, pos) {
+  /* function printRead(mode, pos) {
     switch (mode) {
       case 1:
         return `mem[${pos}]`;
@@ -65,7 +60,7 @@ function* run(numbers) {
       default:
         return `mem[mem[${pos}]]`;
     }
-  }
+  } */
 
   let ip = 0;
   let base = 0;
@@ -129,8 +124,6 @@ function* run(numbers) {
       case 99:
         ip = numbers.length;
         break;
-      default:
-        throw new Error(`invalid op: ${numbers[ip]} at ${ip}`);
     }
   }
 }
@@ -252,7 +245,7 @@ function minus(a, b) {
   return result;
 }
 
-function printRoutine(lines) {
+/* function printRoutine(lines) {
   let p;
   for (let r = 0; r < lines.length; r++) {
     for (let c = 0; c < lines[r].length; c++) {
@@ -303,7 +296,7 @@ function printRoutine(lines) {
   }
 
   console.log(routes.join(','));
-}
+} */
 
 function check(lines, r, c) {
   return (
@@ -324,9 +317,10 @@ function isPath(lines, r, c) {
   );
 }
 
-function getNextPosition(dirs, [r, c], di) {
+/* function getNextPosition(dirs, [r, c], di) {
   return [r + dirs[di].r, c + dirs[di].c];
-}
+} */
+
 function getCharCodes(str) {
   return str.split('').map((ch) => ch.charCodeAt(0));
 }
@@ -344,7 +338,6 @@ export function partOne() {
   do {
     a = g.next(input);
     if (a.value === 'input') {
-      throw new Error('I have no input');
     } else {
       outputs.push(+a.value);
     }
@@ -380,7 +373,6 @@ export function partTwo() {
   let a = g.next();
   do {
     if (a.value === 'input') {
-      if (!inputs.length) throw new Error('I have no input');
       a = g.next(inputs.shift());
     } else {
       outputs.push(+a.value);

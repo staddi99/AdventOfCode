@@ -19,7 +19,7 @@ function isComplement(searchArray, currentNum) {
 
 export function partOne(isTest) {
   const data = isTest ? inputArrayTest : inputArray;
-  const preambleAmount = 25;
+  const preambleAmount = isTest ? 5 : 25;
   const searchArray = [];
   let index = 0;
   while (index < preambleAmount) {

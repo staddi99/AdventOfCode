@@ -33,7 +33,6 @@ export function partOne(isTest) {
   });
 
   const res = Math.abs(ship.north) + Math.abs(ship.east);
-  console.log(res);
   return res;
 }
 

@@ -2,24 +2,20 @@ import { partOne, partTwo } from './code';
 
 describe('part 1', () => {
   it('should solve sample input', () => {
-    // expect(partOne(true)).toBe(127);
-    expect(true).toBe(true);
+    expect(partOne(true)).toBe(127);
   });
 
   it('should solve own input', () => {
-    // expect(partOne()).toBe(22477624);
-    expect(true).toBe(true);
+    expect(partOne()).toBe(22477624);
   });
 });
 
 describe('part 2', () => {
-  it('should solve sample input', () => {
-    // expect(partTwo(true)).toBe(62);
-    expect(true).toBe(true);
+  it.skip('should solve sample input', () => {
+    expect(partTwo(true)).toBe(62);
   });
 
   it('should solve own input', () => {
-    // expect(partTwo()).toBe(2980044);
-    expect(true).toBe(true);
+    expect(partTwo()).toBe(2980044);
   });
 });

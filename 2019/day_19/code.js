@@ -14,11 +14,11 @@ class InfiniteGrid {
   }
 
   set(x, y, value) {
-    if (typeof x !== 'number' || typeof y !== 'number') {
+    /* if (typeof x !== 'number' || typeof y !== 'number') {
       throw new Error(
         `x and y must be numbers, got (${typeof x})${x} and (${typeof y})${y}`
       );
-    }
+    } */
     if (x < this.min_x) this.min_x = x;
     if (x > this.max_x) this.max_x = x;
     if (y < this.min_y) this.min_y = y;
@@ -27,7 +27,7 @@ class InfiniteGrid {
     this.grid.set(id, value);
   }
 
-  get(x, y) {
+  /* get(x, y) {
     const id = InfiniteGrid.toId(x, y);
     if (!this.grid.has(id)) {
       this.set(x, y, this.defaultFactory(x, y));
@@ -47,7 +47,7 @@ class InfiniteGrid {
     }
 
     return grid;
-  }
+  } */
 
   sum() {
     let sum = 0;
@@ -58,7 +58,7 @@ class InfiniteGrid {
     return sum;
   }
 
-  toString() {
+  /* toString() {
     let grid = this.toGrid();
     let rows = '';
     for (let y = 0; y < grid.length; y++) {
@@ -73,7 +73,7 @@ class InfiniteGrid {
     }
 
     return rows;
-  }
+  } */
 }
 
 const ADD = '01'; // Add
@@ -266,9 +266,7 @@ class Computer {
       let mode = modes[i];
       let value = this.memory[this.pointer + i];
 
-      if (value === undefined) {
-        value = 0;
-      }
+      value = value === undefined ? 0 : value;
 
       if (mode !== IMMEDIATE_MODE) {
         const can_switch_to_position = !write || i < params - 1;
@@ -320,9 +318,9 @@ class Computer {
     this.outputs.push(v);
   }
 
-  get _() {
+  /* get _() {
     return this.memory.slice(Math.max(0, this.pointer - 1), this.pointer + 8);
-  }
+  } */
 }
 
 class TractorBeam {
@@ -362,9 +360,9 @@ class TractorBeam {
     }
   }
 
-  getWidth(bottom_edge, top_edge) {
+  /* getWidth(bottom_edge, top_edge) {
     return top_edge.x - bottom_edge.x + 1;
-  }
+  } */
 
   computeAt(x, y) {
     let computer = new Computer({ memory: this.memory, inputs: [x, y] });

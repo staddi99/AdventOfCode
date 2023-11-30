@@ -205,9 +205,7 @@ class Computer {
         }
       }
 
-      if (value === undefined) {
-        value = 0;
-      }
+      value = value === undefined ? 0 : value;
 
       values.push(value);
     }
@@ -223,9 +221,9 @@ class Computer {
     this.outputs.push(v);
   }
 
-  get _() {
+  /* get _() {
     return this.memory.slice(Math.max(0, this.pointer - 1), this.pointer + 8);
-  }
+  } */
 }
 
 const EMPTY = 0;
@@ -248,9 +246,9 @@ class Tile {
     this.tile_id = tile_id;
   }
 
-  toString() {
+  /* toString() {
     return DRAW_MAP[this.tile_id] || ' ';
-  }
+  } */
 }
 
 class Grid {
@@ -269,7 +267,7 @@ class Grid {
     return this.tiles.filter((tile) => tile.tile_id === type).length;
   }
 
-  printGrid() {
+  /* printGrid() {
     let screen = '';
     let [min_x, max_x] = this.boundaries.x;
     let [min_y, max_y] = this.boundaries.y;
@@ -283,7 +281,7 @@ class Grid {
     }
 
     console.log(screen);
-  }
+  } */
 
   setBoundariesFromTiles() {
     let tiles_x_sorted = this.tiles.sort((a, b) => a.x - b.x);
@@ -322,7 +320,7 @@ class Screen {
     }
   }
 
-  toString() {
+  /* toString() {
     let screen = '';
     let [min_x, max_x] = this.boundaries.x;
     let [min_y, max_y] = this.boundaries.y;
@@ -340,7 +338,7 @@ class Screen {
     }
 
     return screen;
-  }
+  } */
 }
 
 const wait = (ms = 500) => new Promise((r) => setTimeout(r, ms));
@@ -386,11 +384,11 @@ class Arcade {
     return this.grid;
   }
 
-  async print(ms) {
+  /* async print(ms) {
     readline.cursorTo(process.stdout, 0, 0);
     console.log(this.screen.toString());
     await wait(ms);
-  }
+  } */
 
   freePlay() {
     let computer = this.computer;
@@ -417,9 +415,9 @@ class Arcade {
         }
         this.screen.paint(x, y, tile_id);
 
-        if (this.print_game) {
+        /* if (this.print_game) {
           this.print(ms);
-        }
+        } */
       }
     }
 

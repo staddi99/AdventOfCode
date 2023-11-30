@@ -2,7 +2,7 @@ import { partOne, partTwo } from './code';
 
 describe('part 1', () => {
   it('should solve sample input', () => {
-    expect(partOne(true)[0]).toBe(41);
+    expect(partOne(true)[0]).toBe(210);
   });
 
   it('should solve own input', () => {
@@ -11,7 +11,7 @@ describe('part 1', () => {
 });
 
 describe('part 2', () => {
-  it.skip('should solve sample input', () => {
+  it('should solve sample input', () => {
     expect(partTwo(true)).toBe(802);
   });
 

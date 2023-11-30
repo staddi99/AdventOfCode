@@ -1,5 +1,5 @@
 import input from './input.js';
-import {inputSample1, inputSample2} from './inputSample.js';
+import { inputSample1, inputSample2 } from './inputSample.js';
 
 const inputArray = input.split('\n').map((e) => parseInt(e));
 const inputArrayTest1 = inputSample1.split('\n').map((e) => parseInt(e));
@@ -12,12 +12,12 @@ export function partOne(isTest) {
 
 export function partTwo(isTest) {
   const data = isTest ? inputArrayTest2 : inputArray;
-  const toIterator = (arr, loop=false) => ({
+  const toIterator = (arr, loop = false) => ({
     *[Symbol.iterator]() {
       for (let i = 0; i < loop ? Infinity : arr.length; i++) {
         yield arr[i % arr.length];
       }
-    }
+    },
   });
 
   let value = 0;

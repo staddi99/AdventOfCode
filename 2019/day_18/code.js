@@ -48,11 +48,6 @@ class InfiniteGrid {
   }
 
   set(x, y, value) {
-    if (typeof x !== 'number' || typeof y !== 'number') {
-      throw new Error(
-        `x and y must be numbers, got (${typeof x})${x} and (${typeof y})${y}`
-      );
-    }
     if (x < this.min_x) this.min_x = x;
     if (x > this.max_x) this.max_x = x;
     if (y < this.min_y) this.min_y = y;
@@ -87,7 +82,7 @@ class InfiniteGrid {
     );
   }
 
-  clone() {
+  /* clone() {
     const infinite_grid_clone = new InfiniteGrid();
     const new_map = new Map();
     for (let [key, val] of this.grid) {
@@ -107,9 +102,9 @@ class InfiniteGrid {
     infinite_grid_clone.min_y = this.min_y;
 
     return infinite_grid_clone;
-  }
+  } */
 
-  toGrid() {
+  /* toGrid() {
     let grid = [];
     for (let y = this.min_y; y <= this.max_y; y++) {
       let row = [];
@@ -121,18 +116,18 @@ class InfiniteGrid {
     }
 
     return grid;
-  }
+  } */
 
-  sum() {
+  /* sum() {
     let sum = 0;
     for (let value of this.grid.values()) {
       sum += value;
     }
 
     return sum;
-  }
+  } */
 
-  toString() {
+  /* toString() {
     let grid = this.toGrid();
     let rows = '';
     for (let y = 0; y < grid.length; y++) {
@@ -147,7 +142,7 @@ class InfiniteGrid {
     }
 
     return rows;
-  }
+  } */
 }
 
 const ENTRANCE = '@';
@@ -256,11 +251,6 @@ class Maze {
           cell === ENTRANCE ||
           KEY_RE.test(cell) ||
           (DOOR_RE.test(cell) && keys_collected.includes(cell.toLowerCase()));
-        if (!assert_walkable) {
-          throw new Error(
-            `Unknown cell: ${cell}, keys_collected: ${keys_collected}`
-          );
-        }
       }
 
       if (current && InfiniteGrid.toId(...current) === from_id) {
@@ -371,8 +361,6 @@ class Maze {
 
             if (is_walkable) {
               frontier.push(next_coord);
-            } else {
-              throw new Error(`Unknown cell: ${next_cell}`);
             }
 
             came_from.set(next_id, current_coord);

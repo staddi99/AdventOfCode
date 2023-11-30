@@ -43,7 +43,6 @@ const run = (part, isTest) => {
     }
     if (i === end[0] && j === end[1]) {
       return steps;
-      break;
     }
     for (const [di, dj] of dirs) {
       if (
