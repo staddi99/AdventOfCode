@@ -4,11 +4,15 @@
 [![devDependencies Status](https://status.david-dm.org/gh/staddi99/AdventOfCode.svg?type=dev)](https://david-dm.org/staddi99/AdventOfCode?type=dev)
 [![License: Unlicense](https://img.shields.io/github/license/staddi99/AdventOfCode)](https://raw.githubusercontent.com/staddi99/AdventOfCode/master/LICENSE)
 
+Something is wrong with global snow production, and you've been selected to take a look. The Elves have even given you a map; on it, they've used stars to mark the top fifty locations that are likely to be having problems.
 
+You've been doing this long enough to know that to restore snow operations, you need to check all _fifty stars_ by December 25th.
+
+Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants _one star_. Good luck!
 
 ## Days
 
-*  [❔ Day 1: TBD]()
+*  [✅ Day 1: Trebuchet?!](day_1/)
 *  [❔ Day 2: TBD]()
 *  [❔ Day 3: TBD]()
 *  [❔ Day 4: TBD]()
