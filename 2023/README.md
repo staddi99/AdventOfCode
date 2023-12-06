@@ -17,7 +17,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 3: Gear Ratios](day_3/)
 *  [✅ Day 4: Scratchcards](day_4/)
 *  [✅ Day 5: If You Give A Seed A Fertilizer](day_5/)
-*  [❔ Day 6: TBD]()
+*  [✅ Day 6: Wait For It](day_6/)
 *  [❔ Day 7: TBD]()
 *  [❔ Day 8: TBD]()
 *  [❔ Day 9: TBD]()
