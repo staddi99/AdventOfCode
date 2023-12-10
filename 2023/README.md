@@ -20,7 +20,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 6: Wait For It](day_6/)
 *  [✅ Day 7: Camel Cards](day_7/)
 *  [✅ Day 8: Haunted Wasteland](day_8/)
-*  [❔ Day 9: TBD]()
+*  [✅ Day 9: Mirage Maintenance](day_9/)
 *  [❔ Day 10: TBD]()
 *  [❔ Day 11: TBD]()
 *  [❔ Day 12: TBD]()
