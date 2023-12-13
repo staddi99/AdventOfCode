@@ -24,7 +24,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 10: Pipe Maze](day_10/)
 *  [✅ Day 11: Cosmic Expansion](day_11/)
 *  [✅ Day 12: Hot Springs](day_12/)
-*  [❔ Day 13: TBD]()
+*  [✅ Day 13: Point of Incidence](day_13/)
 *  [❔ Day 14: TBD]()
 *  [❔ Day 15: TBD]()
 *  [❔ Day 16: TBD]()
