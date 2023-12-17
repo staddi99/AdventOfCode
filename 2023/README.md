@@ -27,7 +27,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 13: Point of Incidence](day_13/)
 *  [✅ Day 14: Parabolic Reflector Dish](day_14/)
 *  [✅ Day 15: Lens Library](day_15/)
-*  [❌ Day 16: The Floor Will Be Lava]()
+*  [✅ Day 16: The Floor Will Be Lava](day_16/)
 *  [✅ Day 17: Clumsy Crucible](day_17/)
 *  [❔ Day 18: TBD]()
 *  [❔ Day 19: TBD]()
