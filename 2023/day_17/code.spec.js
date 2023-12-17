@@ -12,7 +12,7 @@ describe('part 1', () => {
 
 describe('part 2', () => {
   it('should solve sample input', () => {
-    expect(partTwo(true)).toBe(71);
+    expect(partTwo(true)).toBe(94);
   });
 
   it('should solve own input', () => {
