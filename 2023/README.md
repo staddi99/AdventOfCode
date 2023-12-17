@@ -26,7 +26,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 12: Hot Springs](day_12/)
 *  [✅ Day 13: Point of Incidence](day_13/)
 *  [✅ Day 14: Parabolic Reflector Dish](day_14/)
-*  [❔ Day 15: TBD]()
+*  [✅ Day 15: Lens Library](day_15/)
 *  [❔ Day 16: TBD]()
 *  [❔ Day 17: TBD]()
 *  [❔ Day 18: TBD]()
