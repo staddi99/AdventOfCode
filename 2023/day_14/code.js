@@ -21,11 +21,9 @@ const slideGrid = (grid, direction) => {
   if (direction == directions.NORTH) {
     for (let x = 0; x < grid[0].length; x++) {
       for (let y = 0; y < grid.length; y++) {
-        // try to move it up
         if (grid[y][x] == 'O') {
           let current = y - 1;
           while (current >= 0 && !grid[current][x].match(/[O#]/)) {
-            // swap
             let temp = grid[current + 1][x];
             grid[current + 1][x] = grid[current][x];
             grid[current][x] = temp;
@@ -38,11 +36,9 @@ const slideGrid = (grid, direction) => {
   } else if (direction == directions.SOUTH) {
     for (let x = 0; x < grid[0].length; x++) {
       for (let y = grid.length - 1; y >= 0; y--) {
-        // try to move it down
         if (grid[y][x] == 'O') {
           let current = y + 1;
           while (current < grid.length && !grid[current][x].match(/[O#]/)) {
-            // swap
             let temp = grid[current - 1][x];
             grid[current - 1][x] = grid[current][x];
             grid[current][x] = temp;
@@ -55,11 +51,9 @@ const slideGrid = (grid, direction) => {
   } else if (direction == directions.WEST) {
     for (let y = 0; y < grid.length; y++) {
       for (let x = 0; x < grid[y].length; x++) {
-        // try to move it right
         if (grid[y][x] == 'O') {
           let current = x - 1;
           while (current >= 0 && !grid[y][current].match(/[O#]/)) {
-            // swap
             let temp = grid[y][current + 1];
             grid[y][current + 1] = grid[y][current];
             grid[y][current] = temp;
@@ -72,11 +66,9 @@ const slideGrid = (grid, direction) => {
   } else if (direction == directions.EAST) {
     for (let y = 0; y < grid.length; y++) {
       for (let x = grid[y].length - 1; x >= 0; x--) {
-        // try to move it left
         if (grid[y][x] == 'O') {
           let current = x + 1;
           while (current < grid[y].length && !grid[y][current].match(/[O#]/)) {
-            // swap
             let temp = grid[y][current - 1];
             grid[y][current - 1] = grid[y][current];
             grid[y][current] = temp;

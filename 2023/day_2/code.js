@@ -77,5 +77,5 @@ export function partTwo(isTest) {
   }, 0);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

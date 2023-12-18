@@ -46,7 +46,6 @@ const run = (isTest) => {
 
   const valves = Object.keys(map).filter((key) => map[key].rate);
 
-  // pressure at valve given mask and time
   const pressures = valves.map(() =>
     [...Array(2 ** valves.length)].map(() => [...Array(31)].fill(-Infinity))
   );

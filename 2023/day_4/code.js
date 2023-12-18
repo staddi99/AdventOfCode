@@ -51,5 +51,5 @@ export function partTwo(isTest) {
   return cards.reduce((sum, val) => sum + val);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

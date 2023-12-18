@@ -15,7 +15,6 @@ const ranks = {
 };
 
 const getHandRank = (hand) => {
-  // count all cards
   const counts = Object.values(
     hand.split('').reduce((obj, character) => {
       if (obj[character] == null) obj[character] = 0;
@@ -46,8 +45,6 @@ export function partOne(isTest) {
 
   const cards = 'AKQJT98765432';
 
-  // sort all hands based of value, then by highest card
-  // add up all cards by rank * bid
   return hands
     .sort((a, b) => {
       if (a.rank != b.rank) return a.rank - b.rank;
@@ -68,7 +65,6 @@ export function partTwo(isTest) {
   const hands = data.map((line) => {
     const [hand, bid] = line.split(/ /g);
 
-    // count how many Js and try all possible if one is a J
     let jCount = 0;
     const cards = hand.split('').map((card) => {
       if (card == 'J') {
@@ -77,8 +73,6 @@ export function partTwo(isTest) {
       } else return [card];
     });
 
-    // if there are 4 or 5 J's, then we know the best is a FIVE_KIND
-    // else try all possible replacements for J's
     let rank = ranks.FIVE_KIND;
     if (jCount < 4) {
       rank = cartesian(...cards).reduce((max, hand) => {
@@ -91,8 +85,6 @@ export function partTwo(isTest) {
 
   const cards = 'AKQT98765432J';
 
-  // sort all hands based of value, then by highest card
-  // add up all cards by rank * bid
   return hands
     .sort((a, b) => {
       if (a.rank != b.rank) return a.rank - b.rank;
@@ -107,5 +99,5 @@ export function partTwo(isTest) {
     .reduce((sum, hand, index) => sum + hand.bid * (index + 1), 0);
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());

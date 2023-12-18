@@ -13,28 +13,23 @@ const run = (part, isTest) => {
   let minX = Math.min(...paths.flat().map(([x, y]) => x));
   let maxX = Math.max(...paths.flat().map(([x, y]) => x));
   const minY = 0;
-  // add 2 rows for part 2
   const maxY = Math.max(...paths.flat().map(([x, y]) => y)) + (part === 2) * 2;
 
   if (part === 2) {
-    // part 2 will be isosceles triangle centered at 500
     const yRange = maxY - minY;
     minX = 500 - yRange;
     maxX = 500 + yRange;
   }
 
-  // make x start from zero
   const startX = 500 - minX;
   paths = paths.map((path) => path.map(([x, y]) => [x - minX, y]));
   maxX -= minX;
   minX = 0;
 
-  // add bottom row for part 2
   const map = [...Array(maxY + 1).keys()].map((y) =>
     [...Array(maxX + 1)].fill(+(part === 2 && y === maxY))
   );
 
-  // draw paths
   for (const path of paths) {
     for (let i = 0; i < path.length - 1; i++) {
       const [x1, y1] = path[i];

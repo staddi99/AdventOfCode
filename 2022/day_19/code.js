@@ -19,7 +19,6 @@ const getMaxGeodes = (costs, tMax, part) => {
     maxGeodes = Math.max(maxGeodes, collected[3]);
     if (t === tMax) continue;
 
-    // cap robots and resources to reduce search space
     for (let i = 0; i < 3; i++) {
       robots[i] = Math.min(robots[i], maxCosts[i]);
       collected[i] = Math.min(
@@ -51,7 +50,6 @@ const getMaxGeodes = (costs, tMax, part) => {
             collected.map((c, j) => c - (cost[j] ?? 0) + robots[j]),
             t + 1,
           ]);
-          // skip other branches if we can make a geode or obsidian robot
           if (i >= 2) continue outer;
         }
       }

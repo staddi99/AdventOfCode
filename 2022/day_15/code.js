@@ -12,12 +12,10 @@ const dist = (x, y, x2, y2) => {
 };
 
 const intersect = (p1, p2, p3, p4) => {
-  // Line p1-p2 represented as a1x + b1y = c1
   const a1 = p2[1] - p1[1];
   const b1 = p1[0] - p2[0];
   const c1 = a1 * p1[0] + b1 * p1[1];
 
-  // Line p3-p4 represented as a2x + b2y = c2
   const a2 = p4[1] - p3[1];
   const b2 = p3[0] - p4[0];
   const c2 = a2 * p3[0] + b2 * p3[1];
