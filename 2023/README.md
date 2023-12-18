@@ -29,7 +29,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 15: Lens Library](day_15/)
 *  [✅ Day 16: The Floor Will Be Lava](day_16/)
 *  [✅ Day 17: Clumsy Crucible](day_17/)
-*  [❔ Day 18: TBD]()
+*  [✅ Day 18: Lavaduct Lagoon](day_18/)
 *  [❔ Day 19: TBD]()
 *  [❔ Day 20: TBD]()
 *  [❔ Day 21: TBD]()
