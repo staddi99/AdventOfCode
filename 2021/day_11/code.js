@@ -7,7 +7,7 @@ const data = (isTest) => {
     .map((line) => line.split('').map(Number));
 };
 
-const increaseCellValue = (input, row, column, flashed = new Set()) => {
+const increaseCellValue = (input, row, column, flashed) => {
   if (row < 0 || row >= input.length) return;
   if (column < 0 || column >= input[0].length) return;
   if (flashed.has(`${row}${column}`)) return;

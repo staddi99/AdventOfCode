@@ -5,9 +5,9 @@ describe('part 1', () => {
     expect(partOne(true)).toBe(15);
   });
 
-  /*   it('should solve own input', () => {
+  it('should solve own input', () => {
     expect(partOne()).toBe(452);
-  }); */
+  });
 });
 
 describe('part 2', () => {
@@ -15,7 +15,7 @@ describe('part 2', () => {
     expect(partTwo(true)).toBe(1134);
   });
 
-  /*   it('should solve own input', () => {
+  it('should solve own input', () => {
     expect(partTwo()).toBe(1263735);
-  }); */
+  });
 });

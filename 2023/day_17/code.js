@@ -34,7 +34,6 @@ function solve(data, minMomentum, maxMomentum) {
       momentum >= minMomentum
     ) {
       return heat + map[i][j];
-      break;
     }
 
     const nextDirs = [];

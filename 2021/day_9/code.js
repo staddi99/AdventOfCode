@@ -7,15 +7,15 @@ const inputArrayTest = inputSample
   .map((r) => r.split('').map(Number));
 
 export function partOne(isTest) {
-  let input = isTest ? inputArrayTest : inputArray;
-  const isLowPoint = (input, x, y) => {
-    const point = input[y][x];
-    const top = y - 1 < 0 ? Number.MAX_SAFE_INTEGER : input[y - 1][x];
-    const left = x - 1 < 0 ? Number.MAX_SAFE_INTEGER : input[y][x - 1];
+  let data = isTest ? inputArrayTest : inputArray;
+  const isLowPoint = (data, x, y) => {
+    const point = data[y][x];
+    const top = y - 1 < 0 ? Number.MAX_SAFE_INTEGER : data[y - 1][x];
+    const left = x - 1 < 0 ? Number.MAX_SAFE_INTEGER : data[y][x - 1];
     const bottom =
-      y + 1 >= input.length ? Number.MAX_SAFE_INTEGER : input[y + 1][x];
+      y + 1 >= data.length ? Number.MAX_SAFE_INTEGER : data[y + 1][x];
     const right =
-      x + 1 >= input[0].length ? Number.MAX_SAFE_INTEGER : input[y][x + 1];
+      x + 1 >= data[0].length ? Number.MAX_SAFE_INTEGER : data[y][x + 1];
     return [
       [top, left, right, bottom].reduce(
         (isLowPoint, adjacent) => isLowPoint && point < adjacent,
@@ -25,9 +25,9 @@ export function partOne(isTest) {
       1 + point,
     ];
   };
-  const riskSum = input.reduce((sum, row, y) => {
+  const riskSum = data.reduce((sum, row, y) => {
     const rowRisk = row.reduce((sum, cell, x) => {
-      const [lowPoint, point, risk] = isLowPoint(input, x, y);
+      const [lowPoint, point, risk] = isLowPoint(data, x, y);
       if (lowPoint) return sum + risk;
       return sum;
     }, 0);
@@ -37,30 +37,30 @@ export function partOne(isTest) {
 }
 
 export function partTwo(isTest) {
-  let input = isTest ? inputArrayTest : inputArray;
-  const findBasin = (input, x, y) => {
+  let data = isTest ? inputArrayTest : inputArray;
+  const findBasin = (data, x, y) => {
     if (x < 0) return 0;
     if (y < 0) return 0;
-    if (x >= input[0].length) return 0;
-    if (y >= input.length) return 0;
-    if (input[y][x] === 9) return 0;
+    if (x >= data[0].length) return 0;
+    if (y >= data.length) return 0;
+    if (data[y][x] === 9) return 0;
 
-    input[y][x] = 9;
+    data[y][x] = 9;
     return (
       1 +
       // Left
-      findBasin(input, x - 1, y) +
+      findBasin(data, x - 1, y) +
       // Top
-      findBasin(input, x, y - 1) +
+      findBasin(data, x, y - 1) +
       // Right
-      findBasin(input, x + 1, y) +
+      findBasin(data, x + 1, y) +
       // Bottom
-      findBasin(input, x, y + 1)
+      findBasin(data, x, y + 1)
     );
   };
-  const allBasins = input.reduce((all, row, y) => {
+  const allBasins = data.reduce((all, row, y) => {
     const basins = row.reduce((all, cell, x) => {
-      const size = findBasin(input, x, y);
+      const size = findBasin(data, x, y);
       return [...all, size];
     }, []);
     return [...all, ...basins];

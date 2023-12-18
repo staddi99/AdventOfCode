@@ -50,12 +50,6 @@ export function partTwo(isTest) {
     S: (distance) => (ship.north -= distance),
     E: (distance) => (ship.east += distance),
     W: (distance) => (ship.east -= distance),
-    L: (angle) => (ship.angle += angle),
-    R: (angle) => (ship.angle += 360 - angle),
-    F: (distance) => {
-      let dir = ship.direction[(ship.angle / 90) % 4];
-      return operations[dir](distance);
-    },
   };
 
   let wayMatrix = [

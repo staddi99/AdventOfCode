@@ -91,9 +91,9 @@ export function partTwo(isTest) {
       if (t == 2) {
         return this.grid[this.grid.length - 1];
       }
-      if (t == 3) {
-        return this.grid.map((r) => r[0]).join('');
-      }
+      // if (t == 3) {
+      return this.grid.map((r) => r[0]).join('');
+      // }
     }
 
     addNeighbor(tile, edge) {

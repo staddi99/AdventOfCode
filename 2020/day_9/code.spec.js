@@ -11,7 +11,7 @@ describe('part 1', () => {
 });
 
 describe('part 2', () => {
-  it.skip('should solve sample input', () => {
+  it('should solve sample input', () => {
     expect(partTwo(true)).toBe(62);
   });
 

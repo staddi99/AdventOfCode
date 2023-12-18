@@ -6,17 +6,6 @@ const inputArrayTest = inputSample.split('\n');
 
 const directions = { NORTH: 0, EAST: 1, SOUTH: 2, WEST: 3 };
 
-const printGrid = (grid) => {
-  let print = '';
-  for (let y = 0; y < grid.length; y++) {
-    for (let x = 0; x < grid[y].length; x++) {
-      print += grid[y][x];
-    }
-    print += '\n';
-  }
-  console.log(print);
-};
-
 const slideGrid = (grid, direction) => {
   if (direction == directions.NORTH) {
     for (let x = 0; x < grid[0].length; x++) {
@@ -63,7 +52,7 @@ const slideGrid = (grid, direction) => {
         }
       }
     }
-  } else if (direction == directions.EAST) {
+  } else /* if (direction == directions.EAST)  */{
     for (let y = 0; y < grid.length; y++) {
       for (let x = grid[y].length - 1; x >= 0; x--) {
         if (grid[y][x] == 'O') {

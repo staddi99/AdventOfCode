@@ -6,7 +6,7 @@ const inputArrayTest = inputSample.split('\n').map((x) => x.split(''));
 
 export function partOne(isTest) {
   const data = isTest ? inputArrayTest : inputArray;
-  const getAdjacentSeats = (i = 0, j = 0) => {
+  const getAdjacentSeats = (i, j) => {
     let seats = [];
     if (i - 1 !== -1 && j - 1 !== -1) seats.push([i - 1, j - 1]);
     if (i - 1 !== -1) seats.push([i - 1, j]);
@@ -55,7 +55,7 @@ export function partOne(isTest) {
 
 export function partTwo(isTest) {
   const data = isTest ? inputArrayTest : inputArray;
-  const getVisibleSeats = (i = 0, j = 0) => {
+  const getVisibleSeats = (i, j) => {
     let seats = [];
     if (i - 1 !== -1 && j - 1 !== -1) {
       if (data[i - 1][j - 1] === '.') {
@@ -213,7 +213,7 @@ export function partTwo(isTest) {
     return seats;
   };
 
-  let oldSeatStates = JSON.parse(JSON.stringify(inputArray));
+  let oldSeatStates = JSON.parse(JSON.stringify(data));
   let currentSeatStates = changeSeatStates(oldSeatStates);
 
   while (JSON.stringify(oldSeatStates) !== JSON.stringify(currentSeatStates)) {

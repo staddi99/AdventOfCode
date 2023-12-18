@@ -54,7 +54,7 @@ export function partOne(isTest) {
           return cards.indexOf(b.hand[i]) - cards.indexOf(a.hand[i]);
         }
       }
-      return 0;
+      // return 0;
     })
     .reduce((sum, hand, index) => sum + hand.bid * (index + 1), 0);
 }
@@ -94,7 +94,7 @@ export function partTwo(isTest) {
           return cards.indexOf(b.hand[i]) - cards.indexOf(a.hand[i]);
         }
       }
-      return 0;
+      // return 0;
     })
     .reduce((sum, hand, index) => sum + hand.bid * (index + 1), 0);
 }

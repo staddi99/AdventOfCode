@@ -11,9 +11,9 @@ describe('part 1', () => {
 });
 
 describe('part 2', () => {
-  /* it('should solve sample input', () => {
+  it('should solve sample input', () => {
     expect(partTwo(true)).toBe(26);
-  }); */
+  });
 
   it('should solve own input', () => {
     expect(partTwo()).toBe(1944);

@@ -41,7 +41,7 @@ export function partOne(isTest) {
 
 export function partTwo(isTest) {
   const data = isTest ? inputArrayTest : inputArray;
-  let invalidNumber = partOne();
+  let invalidNumber = partOne(isTest);
   let numList = [data[0], data[1]];
   let sum = data[0] + data[1];
   let index = 2;

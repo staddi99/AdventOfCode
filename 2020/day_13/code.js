@@ -34,7 +34,7 @@ export function partTwo(isTest) {
   let inc = busses[0][0];
   let product = busses.map((el) => el[0]).reduce((a, b) => a * b);
   let p2 = true;
-  let start = 100000000000000;
+  let start = isTest ? 1000000 : 100000000000000;
   let res = 0;
   while (p2) {
     for (let t = start; t < product; t += inc) {

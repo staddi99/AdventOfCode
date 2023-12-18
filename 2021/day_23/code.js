@@ -4,7 +4,7 @@ import inputSample from './inputSample.js';
 const getData = (isTest) => (isTest ? inputSample : input).split('\n');
 
 const MinHeap = {
-  siftDown(h, i = 0, v = h[i]) {
+  siftDown(h, i, v) {
     if (i < h.length) {
       let k = v[0];
       while (1) {
