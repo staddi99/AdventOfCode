@@ -153,5 +153,5 @@ export function partTwo(isTest) {
   return part2;
 }
 
-console.log('Part 1: ' + partOne());
-console.log('Part 2: ' + partTwo());
+// console.log('Part 1: ' + partOne());
+// console.log('Part 2: ' + partTwo());
