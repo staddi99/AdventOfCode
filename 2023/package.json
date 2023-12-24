@@ -13,5 +13,8 @@
     "url": "https://github.com/staddi99/AdventOfCode/issues"
   },
   "homepage": "https://github.com/staddi99/AdventOfCode/tree/main/2023#readme",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "z3-solver": "^4.12.4"
+  }
 }

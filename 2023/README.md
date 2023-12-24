@@ -35,7 +35,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 21: Step Counter](day_21/)
 *  [✅ Day 22: Sand Slabs](day_22/)
 *  [✅ Day 23: A Long Walk](day_23/)
-*  [❔ Day 24: TBD]()
+*  [✅ Day 24: Never Tell Me The Odds](day_24/)
 *  [❔ Day 25: TBD]()
 
 ## Previous Years
