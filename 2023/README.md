@@ -36,7 +36,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 *  [✅ Day 22: Sand Slabs](day_22/)
 *  [✅ Day 23: A Long Walk](day_23/)
 *  [✅ Day 24: Never Tell Me The Odds](day_24/)
-*  [❔ Day 25: TBD]()
+*  [✅ Day 25: Snowverload](day_25/)
 
 ## Previous Years
 *  [![Completion Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/staddi99/AdventOfCode/master/.github/badges/completion-2022.json&label=2022)](https://github.com/staddi99/AdventOfCode/tree/main/2022)
